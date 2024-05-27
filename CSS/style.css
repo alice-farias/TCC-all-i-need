@@ -1,0 +1,29 @@
+.message-banner {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background-color: black; /* Cor de fundo da faixa */
+            color: #ffffff; /* Cor do texto das mensagens */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .message {
+            display: inline-block;
+            padding-left: 5%;
+            animation: slide 15s linear infinite;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+.item {
+    margin: 1vw;
+    padding-left: 2vw;
+    
+}
+
