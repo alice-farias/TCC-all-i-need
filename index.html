@@ -16,55 +16,53 @@
 </head>
 
 <body data-bs-theme="light">
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mb-5 ">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex justify-content-center" href="#"><img src="./IMG/logo.png" alt="" width="180"
-            height="80"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Quem Somos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Contato
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#"><img src="./IMG/do-utilizador.png" alt="" width="25"
-                        height="25"> Instagram</a></li>
-                  <li><a class="dropdown-item" href="#"><img src="./IMG/chamada-telefonica.png" alt="" width="25"
-                        height="25"> Telefone</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="https://www.instagram.com/reagbelasartes/"><img
-                        src="./IMG/instagram.png" alt="" width="25" height="25"> Localização</a></li>
-                </ul>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
-                    <label class="form-check-label" for="modo-noturno">Modo Noturno</label>
-                  </div>
-                </a>
-
-          </div>
+  <header class="d-flex justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top mb-5" style="width: 100%;">
+        <div class="container justify-content-center">
+          <a href="#"><img src="./IMG/allINeed.gif" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quem Somos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contato
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><img src="./IMG/do-utilizador.png" alt="" width="25"
+                                            height="25"> Instagram</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="./IMG/chamada-telefonica.png" alt="" width="25"
+                                            height="25"> Telefone</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="https://www.instagram.com/reagbelasartes/"><img
+                                            src="./IMG/instagram.png" alt="" width="25" height="25"> Localização</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
+
+
+
+
+
 
     <div class="cardi mb-3">
       <img src="./IMG/banner.gif" class="card-img-top" alt="...">
@@ -91,7 +89,7 @@
 
     <h2 class="d-flex justify-content-center">Camisetas</h2>
 
-    <div class="owl-carousel owl-theme">
+    <div class="owl-carousel owl-theme ">
       <div class="item">
         <div class="card2" style="width: 12rem;">
           <img class="card-img-top camisaPreta" src="./IMG/camisaPreta.png" alt="Card image cap">
@@ -114,15 +112,36 @@
       </div>
       <div class="item">
         <div class="card4" style="width: 12rem;">
-            <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Camisa Branca</h5>
-                <p class="card-text">Unisex.</p>
-                <a href="#" class="btn btn-secondary">Comprar</a>
-            </div>
+          <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Branca</h5>
+            <p class="card-text">Unisex.</p>
+            <a href="#" class="btn btn-secondary">Comprar</a>
+          </div>
         </div>
+      </div>
+      <div class="item">
+        <div class="card8" style="width: 12rem;">
+          <img class="card-img-top moletomBranco" src="./IMG/moletomBranco.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Branca</h5>
+            <p class="card-text">Unisex.</p>
+            <a href="#" class="btn btn-secondary">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="card9" style="width: 12rem;">
+          <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Branca</h5>
+            <p class="card-text">Unisex.</p>
+            <a href="#" class="btn btn-secondary">Comprar</a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
     <h2 class="d-flex justify-content-center">Jaquetas</h2>
 
@@ -150,8 +169,8 @@
       </div>
 
       <div class="item">
-        <div class="card" style="width: 12rem;">
-          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.jpg" alt="Card image cap">
+        <div class="card5" style="width: 12rem;">
+          <img class="card-img-top blazer" src="./IMG/blazer.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Jaqueta de Couro</h5>
             <p class="card-text">Unisex.</p>
@@ -161,8 +180,8 @@
       </div>
 
       <div class="item">
-        <div class="card1" style="width: 12rem;">
-          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.jpg" alt="Card image cap">
+        <div class="card6" style="width: 12rem;">
+          <img class="card-img-top moletomPreto" src="./IMG/moletomPreto.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Jaqueta de Couro</h5>
             <p class="card-text">Unisex.</p>
@@ -171,9 +190,11 @@
         </div>
       </div>
 
+
+
       <div class="item">
-        <div class="card1" style="width: 12rem;">
-          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.jpg" alt="Card image cap">
+        <div class="card7" style="width: 12rem;">
+          <img class="card-img-top jaquetaLaranja" src="./IMG/jaquetaLaranja.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Jaqueta de Couro</h5>
             <p class="card-text">Unisex.</p>

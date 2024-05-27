@@ -1,15 +1,3 @@
-
-// Modo Noturno
-const inputCheck = document.querySelector('#modo-noturno');
-const elemento = document.querySelector('body');
-
-if (inputCheck && elemento) {
-    inputCheck.addEventListener('click', () => {
-        const modo = inputCheck.checked ? 'dark' : 'light';
-        elemento.setAttribute("data-bs-theme", modo);
-    });
-}
-
 // Inicialização do Owl Carousel
 
 $(document).ready(function() {
@@ -32,7 +20,7 @@ $(document).ready(function() {
 });
 
 // Adicionar Event Listeners para todos os cards
-const cards = document.querySelectorAll('.card0, .card1, .card2, .card3');
+const cards = document.querySelectorAll('.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8');
 
 cards.forEach(card => {
     let defaultImg, hoverImgSrc, defaultImgSrc;
@@ -59,6 +47,27 @@ cards.forEach(card => {
         hoverImgSrc = './IMG/camisaBranca.gif';
         defaultImgSrc = './IMG/camisaBranca.png';
     }
+    else if (card.classList.contains('card5')) {
+        defaultImg = card.querySelector('.blazer');
+        hoverImgSrc = './IMG/blazer.gif';
+        defaultImgSrc = './IMG/blazer.png';
+    }
+    else if (card.classList.contains('card6')) {
+        defaultImg = card.querySelector('.moletomPreto');
+        hoverImgSrc = './IMG/moletomPreto.gif';
+        defaultImgSrc = './IMG/moletomPreto.png';
+    }
+    else if (card.classList.contains('card7')) {
+        defaultImg = card.querySelector('.jaquetaLaranja');
+        hoverImgSrc = './IMG/jaquetaLaranja.gif';
+        defaultImgSrc = './IMG/jaquetaLaranja.png';
+    }
+    else if (card.classList.contains('card8')) {
+        defaultImg = card.querySelector('.moletomBranco');
+        hoverImgSrc = './IMG/moletomBranco.gif';
+        defaultImgSrc = './IMG/moletomBranco.png';
+    }
+
 
     if (defaultImg) {
         console.log(`Adicionando event listeners para ${card.className}`);
