@@ -9,7 +9,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  
+
 
   <link rel="stylesheet" href="./CSS/style.css">
 
@@ -18,56 +18,57 @@
 
 <body>
   <header class="d-flex justify-content-center">
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top mb-5" style="width: 100%; background-color: #222222;">
-        <div class="container justify-content-center">
-          <a href=""><img src="./IMG/allINeed.gif" alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
-                        <li class="nav-item ">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Página Inicial</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Quem Somos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Contato
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><img src="./IMG/do-utilizador.png" alt="" width="25"
-                                            height="25"> Instagram</a></li>
-                                <li><a class="dropdown-item " href="#"><img src="./IMG/chamada-telefonica.png" alt="" width="25"
-                                            height="25"> Telefone</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item " href="https://www.instagram.com/reagbelasartes/"><img
-                                            src="./IMG/instagram.png" alt="" width="25" height="25"> Localização</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container justify-content-center">
+        <a class="navbar-brand" href="#"><img src="./IMG/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Contatos</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                <li><a class="dropdown-item" href="#">Telefone</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Localização</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="openCart()">Carrinho
+                <span id="cart-item-count" class="badge bg-secondary">0</span>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
+  </header>
 
 
 
-
-
-
-    <div class="cardi mb-3">
-      <img src="./IMG/banner.gif" class="card-img-top" alt="...">
-      <div class="message-banner">
+  <div class="card mb-3">
+    <img src="./IMG/banner.gif" class="card-img-top" alt="Banner image">
+    <div class="message-banner">
+      <div class="messages">
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
+        <span class="message">Frete Grátis</span>
         <span class="message">Frete Grátis</span>
         <span class="message">Frete Grátis</span>
         <span class="message">Frete Grátis</span>
@@ -79,140 +80,234 @@
         <span class="message">Frete Grátis</span>
       </div>
     </div>
-
-
-
-
-
+  </div>
   </header>
 
   <main>
 
-    <h2 class="d-flex justify-content-center">Camisetas</h2>
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h4>Carrinho</h4>
+        <button class="close-cart-btn" onclick="closeCart()"> X </button>
+      </div>
+      <div class="cart-items">
+        <div class="item-image">
+          <!-- Adicione esta linha para exibir a imagem -->
+          <img src="./IMG/camisaPreta.png" alt="Camisa Preta">
+      </div>
+        <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
+      </div>
+      <div class="cart-total">
+        <h5>Total: <span id="cart-total">R$ 0,00</span></h5>
+      </div>
+      <div class="cart-buttons">
+        <button class="continue-btn" onclick="continueShopping()">Continuar</button>
+        <button class="cancel-btn" onclick="cancelAndCloseCart()">Cancelar</button>
+      </div>
+    </div>
 
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="card2" style="width: 12rem;">
-          <img class="card-img-top camisaPreta" src="./IMG/camisaPreta.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Preta</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card3" style="width: 12rem;">
-          <img class="card-img-top camisa" src="./IMG/camisa.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Camisa</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card4" style="width: 12rem;">
-          <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Branca</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card8" style="width: 12rem;">
-          <img class="card-img-top moletomBranco" src="./IMG/moletomBranco.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Branca</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="item">
-        <div class="card9" style="width: 12rem;">
-          <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Camisa Branca</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
+    <div class="container">
+      <h2 class="text-center">Camisas</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+        <div class="col">
+          <div class="card card2">
+            <img class="card-img-top camisaPreta" src="./IMG/camisaPreta.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa Preta</h5>
+              <p class="card-text">Unisex.</p>
+
+              <a href="#" class="btn btn-dark"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+              <button
+                onclick="responsiveVoice.speak('Camisa de botão unisex preta com mangas curtas', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card3">
+            <img class="card-img-top camisa" src="./IMG/camisa.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa</h5>
+              <p class="card-text">Unisex.</p>
+
+              <a href="#" class="btn btn-dark"
+                onclick="addItemToCart({ image: './IMG/camisa.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+              <button
+                onclick="responsiveVoice.speak('Camiseta unisex cinza de mangas curtas', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card4">
+            <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa Branca</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button
+                onclick="responsiveVoice.speak('Camiseta unisex branca com mangas curtas', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card8">
+            <img class="card-img-top moletomBranco" src="./IMG/moletomBranco.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Moletom Branco</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card9">
+            <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa Branca</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Adicione mais cards conforme necessário -->
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Jaquetas</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+        <div class="col">
+          <div class="card card0">
+            <img class="card-img-top default-img" src="./IMG/default-img.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Jaqueta Vintage</h5>
+              <p class="card-text">Unisex</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card1">
+            <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Jaqueta de Couro</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card5">
+            <img class="card-img-top blazer" src="./IMG/blazer.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Blazer</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card6">
+            <img class="card-img-top moletomPreto" src="./IMG/moletomPreto.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Moletom Preto</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card7">
+            <img class="card-img-top jaquetaLaranja" src="./IMG/jaquetaLaranja.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Jaqueta Laranja</h5>
+              <p class="card-text">Unisex.</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="25px">
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 class="d-flex justify-content-center">Jaquetas</h2>
-
-
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="card0" style="width: 12rem;">
-          <img class="card-img-top default-img" src="./IMG/default-img.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jaqueta Vintage</h5>
-            <p class="card-text">Unisex</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="card1" style="width: 12rem;">
-          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jaqueta de Couro</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="card5" style="width: 12rem;">
-          <img class="card-img-top blazer" src="./IMG/blazer.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jaqueta de Couro</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="card6" style="width: 12rem;">
-          <img class="card-img-top moletomPreto" src="./IMG/moletomPreto.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jaqueta de Couro</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="item">
-        <div class="card7" style="width: 12rem;">
-          <img class="card-img-top jaquetaLaranja" src="./IMG/jaquetaLaranja.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Jaqueta de Couro</h5>
-            <p class="card-text">Unisex.</p>
-            <a href="#" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </main>
 
-
+  <section class="parallax-section">
+    <div class="containerDiversidade">
+      <div class="row">
+        <div class="col-12">
+          <div class="cardDiversidade" id="imageCard">
+            <img src="./IMG/diversidade.gif" class="card-img-top" alt="Image 1" id="cardImage">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="button-container">
+        <button class="btn btn-primary" onclick="changeImage('./IMG/image4.jpg')"></button>
+        <button class="btn btn-danger" onclick="changeImage('./IMG/image1.jpg')"></button>
+        <button class="btn btn-success" onclick="changeImage('./IMG/image2.jpg')"></button>
+        <button class="btn btn-warning" onclick="changeImage('./IMG/image3.jpg')"></button>
+        <button class="btn btn-dark" onclick="changeImage('./IMG/image5.jpg')"></button>
+      </div>
+    </div>
+  </section>
+  
 
 
   <!-- plugin de acessibilidade -->
 
-  <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js"></script>
+
+
+
+
+  <!-- plugin de voz -->
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=yyJkkDtK"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

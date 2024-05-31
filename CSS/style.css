@@ -1,27 +1,37 @@
-
+.card {
+    margin-bottom: 1.5rem;
+}
 
 .message-banner {
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-            background-color: black; /* Cor de fundo da faixa */
-            color: #ffffff; /* Cor do texto das mensagens */
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .message {
-            display: inline-block;
-            padding-left: 5%;
-            animation: slide 15s linear infinite;
-        }
-        @keyframes slide {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: black; /* Cor de fundo da faixa */
+    color: #ffffff; /* Cor do texto das mensagens */
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.messages {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 25s linear infinite;
+}
+
+.message {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
 .item {
     margin: 1vw;
@@ -29,33 +39,172 @@
     
 }
 
-.owl-carousel .item {
-    border: 1px solid #0000001f; 
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+.card-body .title {
+    font-size: xx-large;
 }
 
 
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; 
+   
+}
+
+/* Estilo para centralizar o conteúdo dos cards */
 .card-body {
+    text-align: center; /* Alinha o conteúdo ao centro */
+  }
+  
+  /* Estilo para o botão de compra */
+  .btn-secondary {
+    margin-top: 10px; /* Espaçamento superior */
+  }
+
+  /* Estilo para os cards em dispositivos móveis */
+@media (max-width: 576px) {
+    .card {
+      width: calc(100% - 20px); /* Reduz a largura dos cards */
+      margin: 0 auto 20px auto; /* Centraliza os cards e adiciona espaçamento inferior */
+    }
+  }
+
+  .containerDiversidade {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    margin: 2vw; /* Margem de 2vw */
+    height: 100vh;
+}
+.button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+.button-container button {
+    border-radius: 50%;
+    margin: 10px;
+    width: 40px; /* Diminuir tamanho do botão */
+    height: 40px; /* Diminuir tamanho do botão */
+}
+.cardDiversidade {
+    width: 100%;
+    max-width: 300px; /* Diminuir tamanho do card */
 }
 
-.card-body .btn {
-    margin-top: auto;
+
+/* carrinho */
+
+.cart-sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Reduzindo o tamanho da fonte */
 }
 
-/* Estilos para manter os cartões responsivos */
-.card {
-    width: 100%; /* Ajusta a largura do cartão */
+.cart-sidebar .cart-header {
+    background-color: #000000;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h2 {
-    padding: 5vh;
+.cart-sidebar .cart-items {
+    padding: 16px;
 }
 
+.cart-sidebar .cart-items .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.cart-sidebar .cart-items .cart-item .item-image {
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    margin-right: 10px;
+}
+
+.cart-sidebar .cart-items .cart-item .item-details {
+    flex-grow: 1;
+}
+
+.cart-sidebar .cart-items .cart-item .item-details .item-name {
+    font-weight: bold;
+}
+
+.cart-sidebar .cart-buttons {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-sidebar .cart-buttons .cancel-btn {
+    padding: 8px 16px; /* Reduzindo o padding dos botões */
+    font-size: 14px; /* Reduzindo o tamanho da fonte dos botões */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-sidebar .cart-buttons .continue-btn {
+    background-color: #4b7747;
+    color: #fff;
+}
+
+.cart-sidebar .cart-buttons .cancel-btn {
+    background-color: #551818;
+    color: #fff;
+}
+
+.cart-total {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+
+}
+
+.cart-buttons .cancel-btn {
+    padding: 8px 16px; /* Reduzindo o padding dos botões */
+    font-size: 14px; /* Reduzindo o tamanho da fonte dos botões */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-buttons .continue-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.cart-buttons .cancel-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+section {
+    background-image: url("../IMG/bgDiversidade.jpg");
+    background-size: cover; /* Ajusta a imagem para cobrir todo o container */
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
