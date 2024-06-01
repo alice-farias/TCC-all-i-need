@@ -32,7 +32,7 @@ cards.forEach(card => {
     } else if (card.classList.contains('card1')) {
         defaultImg = card.querySelector('.jaquetaPreta');
         hoverImgSrc = './IMG/jaquetaPreta.gif';
-        defaultImgSrc = './IMG/jaquetaPreta.jpg';
+        defaultImgSrc = './IMG/jaquetaPreta.png';
     } else if (card.classList.contains('card2')) {
         defaultImg = card.querySelector('.camisaPreta');
         hoverImgSrc = './IMG/camisaPreta.gif';
@@ -188,6 +188,15 @@ function cancelAndCloseCart() {
 function updateNavbarCartCount() {
     document.getElementById('cart-item-count').textContent = cartItems.length;
 }
+
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita o comportamento padrão do botão
+        // Adicione aqui o código para adicionar o item ao carrinho
+    });
+});
+
+
 
 
 // joguinho diversidade 

@@ -45,6 +45,7 @@
 
 
 
+
 button {
     border: none;
     border-radius: 5px;
@@ -110,6 +111,15 @@ button {
     z-index: 9999;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     font-size: 14px; /* Reduzindo o tamanho da fonte */
+    display: flex;
+    flex-direction: column; /* Para garantir que o conteúdo seja empilhado verticalmente */
+}
+
+.cart-items {
+    flex: 1; /* Faz a área de itens expandir para preencher o espaço disponível */
+    max-height: calc(100% - 100px); /* Defina a altura máxima desejada, deixando espaço para o cabeçalho e os botões */
+    overflow-y: auto; /* Permite rolar verticalmente quando necessário */
+    padding: 16px; /* Adicione preenchimento para evitar que os itens fiquem muito próximos às bordas */
 }
 
 .cart-sidebar .cart-header {
@@ -121,65 +131,44 @@ button {
     align-items: center;
 }
 
-.cart-sidebar .cart-items {
+.cart-total {
+    background-color: #000000;
+    color: #ffffff;
     padding: 16px;
+    text-align: center;
 }
 
-.cart-sidebar .cart-items .cart-item {
+.cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.cart-sidebar .cart-items .cart-item .item-image {
+.cart-item .item-image {
     width: 50px;
     height: 50px;
     background-color: #f2f2f2;
     margin-right: 10px;
 }
 
-.cart-sidebar .cart-items .cart-item .item-details {
+.cart-item .item-details {
     flex-grow: 1;
 }
 
-.cart-sidebar .cart-items .cart-item .item-details .item-name {
+.cart-item .item-details .item-name {
     font-weight: bold;
 }
 
-.cart-sidebar .cart-buttons {
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.cart-sidebar .cart-buttons .cancel-btn {
-    padding: 8px 16px; /* Reduzindo o padding dos botões */
-    font-size: 14px; /* Reduzindo o tamanho da fonte dos botões */
+.cart-item .delete-item-btn {
     border: none;
-    border-radius: 5px;
+    background: none;
     cursor: pointer;
 }
 
-.cart-sidebar .cart-buttons .continue-btn {
-    background-color: #4b7747;
-    color: #fff;
-}
-
-.cart-sidebar .cart-buttons .cancel-btn {
-    background-color: #551818;
-    color: #fff;
-}
-
-.cart-total {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 2vh;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    
-
+.cart-buttons {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .cart-buttons .cancel-btn {
@@ -191,14 +180,15 @@ button {
 }
 
 .cart-buttons .continue-btn {
-    background-color: #4caf50;
+    background-color: #4b7747;
     color: #fff;
 }
 
 .cart-buttons .cancel-btn {
-    background-color: #f44336;
+    background-color: #551818;
     color: #fff;
 }
+
 
 section {
     background-image: url("../IMG/bgDiversidade.jpg");
@@ -206,5 +196,7 @@ section {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
 
 
