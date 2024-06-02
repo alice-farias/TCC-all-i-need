@@ -1,6 +1,10 @@
 .card {
-    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+   
+
 }
+
+/* mensagem do banner */
 
 .message-banner {
     overflow: hidden;
@@ -33,68 +37,35 @@
     }
 }
 
+/* cards de itens */
+
 .item {
-    margin: 1vw;
-    padding-left: 2vw;
-    
+    margin: 4vw; /* Aumenta o espaçamento entre os itens */
+    padding-left: 1vw; /* Reduz o padding para um look mais minimalista */
 }
 
 .card-body .title {
-    font-size: xx-large;
+    font-size: large; /* Reduz o tamanho da fonte para um visual mais limpo */
 }
-
-
-
 
 button {
     border: none;
     border-radius: 5px;
-    background-color: #ffffff; 
-   
+    background-color: #ffffff;
 }
 
 /* Estilo para centralizar o conteúdo dos cards */
 .card-body {
     text-align: center; /* Alinha o conteúdo ao centro */
-  }
-  
-  /* Estilo para o botão de compra */
-  .btn-secondary {
-    margin-top: 10px; /* Espaçamento superior */
-  }
+}
 
-  /* Estilo para os cards em dispositivos móveis */
-@media (max-width: 576px) {
-    .card {
-      width: calc(100% - 20px); /* Reduz a largura dos cards */
-      margin: 0 auto 20px auto; /* Centraliza os cards e adiciona espaçamento inferior */
-    }
-  }
+/* Estilo para o botão de compra */
+.btn-secondary {
+    margin-top: 1.5em; /* Aumenta o espaçamento superior para mais espaço visual */
+    padding: 0.5em 1em; /* Adiciona padding ao botão */
+    font-size: small; /* Reduz o tamanho da fonte para minimalismo */
+}
 
-  .containerDiversidade {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o conteúdo */
-    margin: 2vw; /* Margem de 2vw */
-    height: 100vh;
-}
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-}
-.button-container button {
-    border-radius: 50%;
-    margin: 10px;
-    width: 40px; /* Diminuir tamanho do botão */
-    height: 40px; /* Diminuir tamanho do botão */
-}
-.cardDiversidade {
-    width: 100%;
-    max-width: 300px; /* Diminuir tamanho do card */
-}
 
 
 /* carrinho */
@@ -169,6 +140,8 @@ button {
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    background-color: #000000;
+
 }
 
 .cart-buttons .cancel-btn {
@@ -190,13 +163,46 @@ button {
 }
 
 
-section {
-    background-image: url("../IMG/bgDiversidade.jpg");
-    background-size: cover; /* Ajusta a imagem para cobrir todo o container */
-    background-repeat: no-repeat;
-    background-position: center;
+/* sessão de diversidade */
+
+.parallax-section {
+    height: 100vh; /* Altura total da viewport */
+    background-image: url('../IMG/bgDiversidade.png'); /* URL da imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-attachment: fixed; /* Mantém a posição da imagem de fundo fixa enquanto a página é rolada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
 }
 
+.containerDiversidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDiversidade {
+    width: 100%; /* Definindo largura do card */
+}
+
+.cardDiversidade img {
+    width: 100%;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container .btn {
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+    width: 30px; /* Largura fixa dos botões */
+    height: 30px; /* Altura fixa dos botões */
+    border-radius: 50%; /* Deixa os botões circulares */
+}
 
 
 

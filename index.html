@@ -47,8 +47,8 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="openCart()">Carrinho
-                <span id="cart-item-count" class="badge bg-secondary">0</span>
+              <a class="nav-link" href="#" onclick="openCart()"> <img src="./IMG/carrinho.png" width="20px">
+                <span id="cart-item-count">0</span>
               </a>
             </li>
           </ul>
@@ -94,7 +94,7 @@
       <div class="cart-items">
         <div class="item-image">
           <!-- Adicione esta linha para exibir a imagem -->
-          <img src="./IMG/camisaPreta.png" alt="Camisa Preta">
+
         </div>
         <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
       </div>
@@ -110,7 +110,6 @@
 
 
     <div class="container">
-      <h2 class="text-center">Camisas</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
         <div class="col">
           <div class="card card2">
@@ -125,31 +124,16 @@
               <button
                 onclick="responsiveVoice.speak('Camisa de botão unisex preta com mangas curtas', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
 
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card card3">
-            <img class="card-img-top camisa" src="./IMG/camisa.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camisa</h5>
-              <p class="card-text">Unisex.</p>
-
-              <a href="#" class="btn btn-dark buy-button"
-                onclick="addItemToCart({ image: './IMG/camisa.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
 
 
-              <button
-                onclick="responsiveVoice.speak('Camiseta unisex cinza de mangas curtas', 'Brazilian Portuguese Female');"
-                type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
-              </button>
-            </div>
-          </div>
-        </div>
+
+
         <div class="col">
           <div class="card card4">
             <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
@@ -164,11 +148,35 @@
               <button
                 onclick="responsiveVoice.speak('Camiseta unisex branca com mangas curtas', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
             </div>
           </div>
         </div>
+
+
+
+        <div class="col">
+          <div class="card card9">
+            <img class="card-img-top sueterVermelho" src="./IMG/sueterVermelho.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sueter Gola Alta</h5>
+              <p class="card-text">Unisex.</p>
+
+
+              <a href="#" class="btn btn-dark buy-button"
+                onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="20px">
+              </button>
+            </div>
+          </div>
+        </div>
+
+
         <div class="col">
           <div class="card card8">
             <img class="card-img-top moletomBranco" src="./IMG/moletomBranco.png" alt="Card image cap">
@@ -183,7 +191,7 @@
 
               <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
 
             </div>
@@ -191,52 +199,9 @@
         </div>
 
 
-        <div class="col">
-          <div class="card card9">
-            <img class="card-img-top camisaBranca" src="./IMG/camisaBranca.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camisa Branca</h5>
-              <p class="card-text">Unisex.</p>
 
 
-              <a href="#" class="btn btn-dark buy-button"
-                onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
 
-
-              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
-                type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Adicione mais cards conforme necessário -->
-      </div>
-    </div>
-
-    <div class="container">
-      <h2 class="text-center">Jaquetas</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
-        <div class="col">
-          <div class="card card0">
-            <img class="card-img-top default-img" src="./IMG/default-img.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Jaqueta Vintage</h5>
-              <p class="card-text">Unisex</p>
-
-
-              <a href="#" class="btn btn-dark buy-button"
-                onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
-
-
-              <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
-                type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
-              </button>
-
-            </div>
-          </div>
-        </div>
         <div class="col">
           <div class="card card1">
             <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
@@ -251,11 +216,14 @@
 
               <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
             </div>
           </div>
         </div>
+
+
+
         <div class="col">
           <div class="card card5">
             <img class="card-img-top blazer" src="./IMG/blazer.png" alt="Card image cap">
@@ -270,11 +238,55 @@
 
               <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
             </div>
           </div>
         </div>
+
+        <div class="col">
+          <div class="card card3">
+            <img class="card-img-top camisa" src="./IMG/camisa.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa</h5>
+              <p class="card-text">Unisex.</p>
+
+              <a href="#" class="btn btn-dark buy-button"
+                onclick="addItemToCart({ image: './IMG/camisa.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+              <button
+                onclick="responsiveVoice.speak('Camiseta unisex cinza de mangas curtas', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="20px">
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card card10">
+            <img class="card-img-top plumaVermelha" src="./IMG/plumaVermelha.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Camisa</h5>
+              <p class="card-text">Unisex.</p>
+
+              <a href="#" class="btn btn-dark buy-button"
+                onclick="addItemToCart({ image: './IMG/camisa.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+              <button
+                onclick="responsiveVoice.speak('Camiseta unisex cinza de mangas curtas', 'Brazilian Portuguese Female');"
+                type="button" value="Play">
+                <img src="./IMG/play.png" alt="Play" width="20px">
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
         <div class="col">
           <div class="card card6">
             <img class="card-img-top moletomPreto" src="./IMG/moletomPreto.png" alt="Card image cap">
@@ -289,11 +301,13 @@
 
               <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
             </div>
           </div>
         </div>
+
+
         <div class="col">
           <div class="card card7">
             <img class="card-img-top jaquetaLaranja" src="./IMG/jaquetaLaranja.png" alt="Card image cap">
@@ -301,48 +315,261 @@
               <h5 class="card-title">Jaqueta Laranja</h5>
               <p class="card-text">Unisex.</p>
 
-
-
               <a href="#" class="btn btn-dark buy-button"
                 onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
 
-
-
               <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
                 type="button" value="Play">
-                <img src="./IMG/play.png" alt="Play" width="25px">
+                <img src="./IMG/play.png" alt="Play" width="20px">
               </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
 
   </main>
 
 
   <section class="parallax-section">
     <div class="containerDiversidade">
-      <div class="row">
-        <div class="col-12">
-          <div class="cardDiversidade" id="imageCard">
-            <img src="./IMG/diversidade.gif" class="card-img-top" alt="Image 1" id="cardImage">
-            <div class="card-body">
-            </div>
+        <div class="cardDiversidade" id="imageCard">
+            <img src="IMG/preto.gif" class="card-img-top" alt="Image 1" id="cardImage">
+            <div class="card-body"></div>
+        </div>
+        <div class="button-container">
+            <button class="btn btn-primary" onclick="changeImage('./IMG/azul.gif')"></button>
+            <button class="btn btn-danger" onclick="changeImage('./IMG/vermelho.gif')"></button>
+            <button class="btn btn-success" onclick="changeImage('./IMG/verde.gif')"></button>
+            <button class="btn btn-warning" onclick="changeImage('./IMG/amarelo.gif')"></button>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+      <div class="col">
+        <div class="card card11">
+          <img class="card-img-top jeans1" src="./IMG/jeans1.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Preta</h5>
+            <p class="card-text">Unisex.</p>
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+            <button
+              onclick="responsiveVoice.speak('Camisa de botão unisex preta com mangas curtas', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+
           </div>
         </div>
       </div>
 
-      <div class="button-container">
-        <button class="btn btn-primary" onclick="changeImage('./IMG/image4.jpg')"></button>
-        <button class="btn btn-danger" onclick="changeImage('./IMG/image1.jpg')"></button>
-        <button class="btn btn-success" onclick="changeImage('./IMG/image2.jpg')"></button>
-        <button class="btn btn-warning" onclick="changeImage('./IMG/image3.jpg')"></button>
-        <button class="btn btn-dark" onclick="changeImage('./IMG/image5.jpg')"></button>
+      <div class="col">
+        <div class="card card15">
+          <img class="card-img-top jeans5" src="./IMG/jeans5.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
       </div>
+
+
+
+
+      <div class="col">
+        <div class="card card12">
+          <img class="card-img-top jeans2" src="./IMG/jeans2.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Camisa Branca</h5>
+            <p class="card-text">Unisex.</p>
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+            
+
+
+            <button
+              onclick="responsiveVoice.speak('Camiseta unisex branca com mangas curtas', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card14">
+          <img class="card-img-top jeans4" src="./IMG/jeans4.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Moletom Branco</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card card13">
+          <img class="card-img-top jeans3" src="./IMG/jeans3.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Sueter Gola Alta</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+ 
+
+
+
+
+
+
+
+      <div class="col">
+        <div class="card card1">
+          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card card1">
+          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1">
+          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1">
+          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card1">
+          <img class="card-img-top jaquetaPreta" src="./IMG/jaquetaPreta.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Jaqueta de Couro</h5>
+            <p class="card-text">Unisex.</p>
+
+
+            <a href="#" class="btn btn-dark buy-button"
+              onclick="addItemToCart({ image: './IMG/camisaPreta.png' ,name: 'Camiseta Cinza', price: 49.99 }, event)">Comprar</a>
+
+
+            <button onclick="responsiveVoice.speak('Blusa de moletom branco', 'Brazilian Portuguese Female');"
+              type="button" value="Play">
+              <img src="./IMG/play.png" alt="Play" width="20px">
+            </button>
+          </div>
+        </div>
+      </div>
+      
     </div>
-  </section>
+
+
+</section>
+
+
 
 
 

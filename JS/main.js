@@ -20,7 +20,7 @@ $(document).ready(function() {
 });
 
 // Adicionar Event Listeners para todos os cards
-const cards = document.querySelectorAll('.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8');
+const cards = document.querySelectorAll('.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15');
 
 cards.forEach(card => {
     let defaultImg, hoverImgSrc, defaultImgSrc;
@@ -66,6 +66,41 @@ cards.forEach(card => {
         defaultImg = card.querySelector('.moletomBranco');
         hoverImgSrc = './IMG/moletomBranco.gif';
         defaultImgSrc = './IMG/moletomBranco.png';
+    }
+    else if (card.classList.contains('card9')) {
+        defaultImg = card.querySelector('.sueterVermelho');
+        hoverImgSrc = './IMG/sueterVermelho.gif';
+        defaultImgSrc = './IMG/sueterVermelho.png';
+    }
+    else if (card.classList.contains('card10')) {
+        defaultImg = card.querySelector('.plumaVermelha');
+        hoverImgSrc = './IMG/plumaVermelha.gif';
+        defaultImgSrc = './IMG/plumaVermelha.png';
+    }
+    else if (card.classList.contains('card11')) {
+        defaultImg = card.querySelector('.jeans1');
+        hoverImgSrc = './IMG/jeans1.gif';
+        defaultImgSrc = './IMG/jeans1.png';
+    }
+    else if (card.classList.contains('card12')) {
+        defaultImg = card.querySelector('.jeans2');
+        hoverImgSrc = './IMG/jeans2.gif';
+        defaultImgSrc = './IMG/jeans2.png';
+    }
+    else if (card.classList.contains('card13')) {
+        defaultImg = card.querySelector('.jeans3');
+        hoverImgSrc = './IMG/jeans3.gif';
+        defaultImgSrc = './IMG/jeans3.png';
+    }
+    else if (card.classList.contains('card14')) {
+        defaultImg = card.querySelector('.jeans4');
+        hoverImgSrc = './IMG/jeans4.gif';
+        defaultImgSrc = './IMG/jeans4.png';
+    }
+    else if (card.classList.contains('card15')) {
+        defaultImg = card.querySelector('.jeans5');
+        hoverImgSrc = './IMG/jeans5.gif';
+        defaultImgSrc = './IMG/jeans5.png';
     }
 
 
