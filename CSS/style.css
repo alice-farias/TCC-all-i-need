@@ -495,53 +495,37 @@ button {
     color: #000000;
 }
 
-.gallery {
-    padding: 50px 20px;
-    background-color: #eaeaea;
-}
-
-.gallery h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-    color: #000000;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.photo-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.ticker {
-    background-color: #000000;
-    color: #fff;
+.photo-ticker {
     overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 0;
+    background-color: #ffffff;
+    padding: 20px 0;
 }
 
 .ticker-wrapper {
     display: flex;
-    animation: ticker 10s linear infinite;
+    animation: ticker 30s linear infinite;
 }
 
-.ticker-text {
-    padding-left: 100%;
+.ticker-content {
+    display: flex;
+}
+
+.ticker-content img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.ticker-content img:hover {
+    transform: scale(1.1);
 }
 
 @keyframes ticker {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
-
-
 
 /* footer */
 
