@@ -86,26 +86,31 @@
 
   <main>
 
+
     <div class="cart-sidebar">
       <div class="cart-header">
-        <h4>Carrinho</h4>
-        <button class="close-cart-btn" onclick="closeCart()"> X </button>
+          <h4>Carrinho</h4>
+          <button class="close-cart-btn" onclick="closeCart()"> X </button>
       </div>
       <div class="cart-items">
-        <div class="item-image">
-          <!-- Adicione esta linha para exibir a imagem -->
-
-        </div>
-        <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
+          <div class="item-image">
+              <!-- Aqui será exibida a imagem do item -->
+              <img src="IMG/preto.gif" width="50px" alt="Camiseta Preta">
+          </div>
+          <div class="item-details">
+              <span class="item-name">Camiseta Preta</span>
+              <span class="item-price">R$ 49.99</span>
+          </div>
       </div>
       <div class="cart-total">
-        <h5>Total: <span id="cart-total">R$ 0,00</span></h5>
+          <h5>Total: <span id="cart-total">R$ 0,00</span></h5>
       </div>
       <div class="cart-buttons">
-        <button class="continue-btn" onclick="continueShopping()">Continuar</button>
-        <button class="cancel-btn" onclick="cancelAndCloseCart()">Cancelar</button>
+          <button class="continue-btn" onclick="continueShopping()">Continuar</button>
+          <button class="cancel-btn" onclick="cancelAndCloseCart()">Cancelar</button>
       </div>
-    </div>
+  </div>
+
 
 
 
@@ -332,18 +337,33 @@
   <section class="parallax-section">
     <div class="containerDiversidade">
         <div class="cardDiversidade" id="imageCard">
-            <img src="IMG/preto.gif" class="card-img-top" alt="Image 1" id="cardImage">
-            <div class="card-body"></div>
+            <!-- Imagem do card -->
+            <img src="IMG/bannerDefault.png" class="card-img-top" alt="Image 1" id="cardImage">
+            <div class="card-body">
+                <!-- Corpo do card (se necessário) -->
+            </div>
         </div>
         <div class="button-container">
-            <button class="btn btn-primary" onclick="changeImage('./IMG/azul.gif')"></button>
-            <button class="btn btn-danger" onclick="changeImage('./IMG/vermelho.gif')"></button>
-            <button class="btn btn-success" onclick="changeImage('./IMG/verde.gif')"></button>
-            <button class="btn btn-warning" onclick="changeImage('./IMG/amarelo.gif')"></button>
+            <!-- Botões para mudar a imagem -->
+            <button class="btn btn-primary" onclick="changeImage('./IMG/bannerOculosLaranja.png', './IMG/oculosLaranja.png')">
+                <img src="./IMG/oculosLaranja.png" alt="Botão Azul" width="50px">
+            </button>
+            <button class="btn btn-danger" onclick="changeImage('./IMG/bannerOculosAzul.png', './IMG/oculosAzul.png')">
+                <img src="./IMG/oculosAzul.png" alt="Botão Vermelho" width="50px">
+            </button>
+            <button class="btn btn-success" onclick="changeImage('./IMG/bannerOculosMarrom.png', './IMG/jaquetaPretang')">
+                <img src="./IMG/oculosMarrom.png" alt="Botão Verde" width="200px">
+            </button>
+            <button class="btn btn-warning" onclick="changeImage('./IMG/bannerOculosPreto.png', './IMG/oculosPreto.png')">
+                <img src="./IMG/oculosPreto.png" alt="Botão Amarelo" width="50px">
+            </button>
         </div>
     </div>
 </section>
 
+
+
+  
 <section>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">

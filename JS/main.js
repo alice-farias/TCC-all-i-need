@@ -122,6 +122,7 @@ cards.forEach(card => {
 
 
 // Variável global para armazenar os itens no carrinho
+// Array para armazenar os itens do carrinho
 let cartItems = [];
 
 // Função para abrir o carrinho
@@ -178,7 +179,6 @@ function cancelAndClearCart() {
     updateNavbarCartCount();
 }
 
-
 // Função para atualizar a exibição do carrinho
 function updateCartUI() {
     const cartItemsContainer = document.querySelector('.cart-items');
@@ -214,7 +214,7 @@ function continueShopping() {
     window.location.href = 'outra_pagina.html';
 }
 
-
+// Função para cancelar e fechar o carrinho
 function cancelAndCloseCart() {
     cancelAndClearCart(); // Chama a função para cancelar e esvaziar o carrinho
 }
@@ -224,23 +224,54 @@ function updateNavbarCartCount() {
     document.getElementById('cart-item-count').textContent = cartItems.length;
 }
 
+// Função para mudar a imagem e atualizar o comportamento do clique
+function changeImage(imagePath, cartImage) {
+    // Altera a imagem principal do card
+    document.getElementById('cardImage').src = imagePath;
+    
+    // Atualiza o comportamento do clique para adicionar o item correto ao carrinho
+    document.getElementById('cardImage').setAttribute('onclick', `addItemToCart({ image: '${cartImage}', name: 'Óculos', price: 49.99 }, event)`);
+}
+
+// Exemplo de uso para selecionar uma imagem específica
 document.querySelectorAll('.buy-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Evita o comportamento padrão do botão
-        // Adicione aqui o código para adicionar o item ao carrinho
+        const imageSrc = this.dataset.image; // Obtém o caminho da imagem do atributo 'data-image'
+        const cartImageSrc = this.dataset.cartImage; // Obtém o caminho da imagem para o carrinho do atributo 'data-cart-image'
+        changeImage(imageSrc, cartImageSrc); // Chama a função para alterar a imagem
     });
+});
+
+// Função para mudar a imagem no card e atualizar o item para adicionar ao carrinho
+function changeImage(imagePath, cartImage) {
+    // Altera a imagem principal do card
+    document.getElementById('cardImage').src = imagePath;
+
+    // Atualiza o comportamento do clique para adicionar o item correto ao carrinho
+    document.getElementById('cardImage').setAttribute('onclick', `addItemToCart({ image: '${cartImage}', name: 'Óculos', price: 49.99 }, event)`);
+}
+
+// Event listeners para os botões de mudança de imagem
+document.querySelector('.btn-primary').addEventListener('click', function() {
+    changeImage('./IMG/bannerOculosLaranja.png', './IMG/oculosLaranja.png');
+});
+
+document.querySelector('.btn-danger').addEventListener('click', function() {
+    changeImage('./IMG/bannerOculosAzul.png', './IMG/oculosAzul.png'); // Corrigido o caminho da imagem
+});
+
+document.querySelector('.btn-success').addEventListener('click', function() {
+    changeImage('./IMG/bannerOculosMarrom.png', './IMG/oculosMarrom.png');
+});
+
+document.querySelector('.btn-warning').addEventListener('click', function() {
+    changeImage('./IMG/bannerOculosPreto.png', './IMG/oculosPreto.png');
 });
 
 
 
 
-// joguinho diversidade 
-
-function changeImage(imageSrc) {
-    document.getElementById('cardImage').src = imageSrc;
-  }
-
-  // login
 
 
 
