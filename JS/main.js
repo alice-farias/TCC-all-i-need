@@ -270,6 +270,57 @@ document.querySelector('.btn-warning').addEventListener('click', function() {
 });
 
 
+// footer
+
+document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var email = document.getElementById('email').value;
+    if (validateEmail(email)) {
+        document.getElementById('message').textContent = "Agradecemos a inscrição!";
+        document.getElementById('message').style.color = "#0f0";
+        document.getElementById('email').value = "";
+    } else {
+        document.getElementById('message').textContent = "Esse e-mail não é válido. Tente novamente!";
+        document.getElementById('message').style.color = "#f00";
+    }
+});
+
+function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+// sesssão sustentável
+
+// JavaScript para qualquer animação adicional
+document.addEventListener('DOMContentLoaded', function() {
+    // Animação ao rolar a página
+    const cards = document.querySelectorAll('.card');
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function checkScroll() {
+        cards.forEach(card => {
+            if (isElementInViewport(card)) {
+                card.classList.add('in-view');
+            } else {
+                card.classList.remove('in-view');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+});
 
 
 
