@@ -1,0 +1,146 @@
+#botao-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o chat expandido */
+#container-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: none; /* Começa oculto */
+    flex-direction: column;
+}
+
+.caixa-mensagens {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.mensagem {
+    margin: 5px 0;
+}
+
+.usuario {
+    text-align: right;
+}
+
+.bot {
+    text-align: left;
+}
+
+#entrada-usuario {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#botao-enviar {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px 10px;
+}
+
+#fechar-chat {
+    align-self: flex-end;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+#botao-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o chat expandido */
+#container-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: none; /* Começa oculto */
+    flex-direction: column;
+}
+
+.caixa-mensagens {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.mensagem {
+    margin: 5px 0;
+}
+
+.usuario {
+    text-align: right;
+}
+
+.bot {
+    text-align: left;
+}
+
+#entrada-usuario {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#botao-enviar {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px 10px;
+}
+
+#fechar-chat {
+    align-self: flex-end;
+    margin: 5px;
+    cursor: pointer;
+}
