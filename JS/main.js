@@ -211,7 +211,7 @@ function updateCartUI() {
 
 // Função para continuar comprando (ir para outra página HTML)
 function continueShopping() {
-    window.location.href = 'outra_pagina.html';
+    window.location.href = '../HTML/checkout.html';
 }
 
 // Função para cancelar e fechar o carrinho
@@ -321,6 +321,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkScroll);
     checkScroll();
 });
+
+
+
+
+
+
 
 
 

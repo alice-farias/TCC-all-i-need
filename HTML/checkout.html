@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento | I Need Brecho</title>
+    <link rel="stylesheet" href="../CSS/checkout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="credit-card" id="credit-card">
+            <div class="front">
+                <div class="card-logo">VISA</div>
+                <div class="card-number" id="card-number-display"></div>
+                <div class="card-holder">
+                    <label>Nome do Cartão</label>
+                    <div id="card-holder-display">Nome Completo</div>
+                </div>
+                <div class="card-expiration">
+                    <label>Validade</label>
+                    <div id="card-expiration-display">MM/AA</div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="magnetic-strip"></div>
+                <div class="cvv-container">
+                    <label>CVV</label>
+                    <div id="card-cvv-display">###</div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+
+
+        <form class="credit-card-form">
+            <div class="input-group ">
+                <label for="card-number" class="input-wrapper" >Número do Cartão</label>
+                <input type="text" id="card-number" maxlength="19" placeholder="0000 0000 0000 0000">
+            </div>
+            <div class="input-group ">
+                <label for="card-holder">Nome do Cartão</label>
+                <input type="text" id="card-holder" placeholder="Nome Completo">
+            </div>
+
+          
+
+            <div class="input-group">
+                <label for="card-expiration-month">Data de Validade</label>
+                <div class="expiration-inputs">
+                    <input type="text" id="card-expiration-month" maxlength="2" placeholder="MM">
+                    <span>/</span>
+                    <input type="text" id="card-expiration-year" maxlength="2" placeholder="YY">
+                </div>
+
+                <div class="input-group">
+                    <label for="card-cvv">CVV</label>
+                    <input type="text" id="card-cvv" maxlength="3" placeholder="CVV">
+                </div> 
+
+            </div>
+           
+
+            <button type="submit" class="submit-btn"><a href="../HTML/cep.html">Finalizar Compra</a></button>
+
+
+        </form>
+    </div>
+
+
+    
+    <script src="../JS/checkout.js"></script>
+</body>
+</html>
