@@ -1,0 +1,33 @@
+#mapa {
+    margin-top: 12vh;
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 2vh;
+}
+
+@media screen and (max-width: 500px) {
+    #mapa {
+        height: 90%;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    #mapa {
+        height: 70%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1599px) {
+    #mapa {
+        height: 40%;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    #mapa {
+        height: 40%;
+        width: 40%;
+    }
+}
