@@ -1,33 +1,46 @@
+h1{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    width: auto;
+}
+
 #mapa {
-    margin-top: 12vh;
+    margin-top: 5vh;
     border: 2px solid rgb(100, 100, 100);
     border-radius: 2vh;
+    max-width: 100%; /* Garante que a imagem não seja maior que seu contêiner */
+    height: auto; /* Permite que a altura se ajuste automaticamente proporcionalmente */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 799px) {
     #mapa {
-        height: 90%;
-        width: 90%;
+        width: 80%; /* Para telas menores, a imagem ocupa 100% da largura do contêiner pai */
+    }
+    a{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    #mapa {
+        width: 40%; /* Para telas maiores, a imagem ocupa 60% da largura do contêiner pai */
+    }
+    a{
+        display: flex;
+        justify-content: center;
     }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 1500px) {
     #mapa {
-        height: 70%;
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 1599px) {
-    #mapa {
-        height: 40%;
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 1601px) {
-    #mapa {
-        height: 40%;
-        width: 40%;
+        width: 30%; /* Para telas maiores, a imagem ocupa 60% da largura do contêiner pai */
     }
 }
