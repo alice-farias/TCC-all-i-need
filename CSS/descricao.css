@@ -1,0 +1,97 @@
+body {
+    align-items: center;
+}
+.container-unica {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10vh;
+}
+.imagem-roupa-unica {
+    position: relative;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.imagem-roupa-unica img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.imagem-roupa-unica:hover img {
+    transform: scale(1.8);
+}
+.detalhes-roupa-unica {
+    width: 50%;
+    float: left;
+    padding-left: 40px;
+}
+.nome-peca-unica {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+.descricao-peca-unica {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+.botao-carrinho-unico {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff5a5f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.botao-carrinho-unico:hover {
+    background-color: #000000;
+}
+.produtos-relacionados-unicos, .comentarios-positivos-unicos {
+    clear: both;
+    margin-top: 50px;
+}
+.produtos-relacionados-unicos h2, .comentarios-positivos-unicos h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+.produtos-relacionados-unicos .produto-unico, .comentarios-positivos-unicos .comentario-unico {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.produtos-relacionados-unicos .produto-unico img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.produtos-relacionados-unicos .nome-produto-unico {
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+}
+.comentarios-positivos-unicos .comentario-unico strong {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.comentarios-positivos-unicos .comentario-unico p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 5px;
+}
