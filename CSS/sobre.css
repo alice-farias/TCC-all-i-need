@@ -1,146 +1,378 @@
+/* Botão para abrir o chat */
 #botao-chat {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: #161718;
     color: #fff;
     font-size: 24px;
     text-align: center;
     line-height: 60px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Garante que esteja acima de outros elementos */
 }
 
-/* Estilos para o chat expandido */
+/* Container do chat expandido */
 #container-chat {
     position: fixed;
-    bottom: 20px;
+    bottom: 100px; /* Ajuste para deixar espaço para o botão de fechar */
     right: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    max-height: 400px;
+    overflow: hidden; /* Para esconder o overflow */
     display: none; /* Começa oculto */
     flex-direction: column;
+    z-index: 998; /* Um nível abaixo do botão para que o botão esteja sempre visível */
 }
 
+/* Caixa de mensagens */
 .caixa-mensagens {
-    height: 300px;
-    overflow-y: scroll;
-    border-bottom: 1px solid #ccc;
+    height: calc(100% - 70px); /* Altura ajustada para caber no espaço disponível */
+    overflow-y: auto; /* Scroll vertical quando necessário */
     padding: 10px;
-    flex-grow: 1;
 }
 
+/* Estilo das mensagens */
 .mensagem {
-    margin: 5px 0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%; /* Limita a largura das mensagens */
 }
 
-.usuario {
+/* Estilos para mensagens do usuário */
+.usuario .mensagem {
+    background-color: #f0f0f0;
     text-align: right;
+    align-self: flex-end; /* Alinha mensagens do usuário à direita */
 }
 
-.bot {
+/* Estilos para mensagens do bot */
+.bot .mensagem {
+    background-color: #e0f7fa;
     text-align: left;
+    align-self: flex-start; /* Alinha mensagens do bot à esquerda */
 }
 
+/* Triângulo indicativo para mensagens do bot */
+.bot .mensagem:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5px; /* Ajusta para centrar verticalmente */
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid transparent;
+    border-right: 15px solid #e0f7fa; /* Cor de fundo do bot */
+}
+
+/* Entrada de texto do usuário */
 #entrada-usuario {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px;
 }
 
+/* Botão de enviar mensagem */
 #botao-enviar {
-    padding: 5px 10px;
+    padding: 8px 15px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px 10px;
+    margin: 10px;
 }
 
+/* Botão para fechar o chat */
 #fechar-chat {
     align-self: flex-end;
-    margin: 5px;
+    margin: 10px;
     cursor: pointer;
+    color: #007bff;
+}
+
+/* Efeito hover para o botão de fechar */
+#fechar-chat:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
 
 
-#botao-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #007bff;
+
+.caixa-mensagens {
+    height: 300px; /* Altura ajustada conforme necessário */
+    overflow-y: auto; /* Scroll vertical quando necessário */
+    padding: 10px; /* Espaçamento interno das mensagens */
+    border: 1px solid #ccc; /* Borda para visualização */
+}
+
+/* Estilos para as mensagens */
+.mensagem {
+    margin-bottom: 10px; /* Espaçamento entre mensagens */
+    padding: 10px; /* Espaçamento interno das mensagens */
+    border-radius: 5px; /* Borda arredondada */
+    max-width: 80%; /* Largura máxima das mensagens */
+    word-wrap: break-word; /* Quebra de palavras longas */
+    background-color: #f0f0f0; /* Cor de fundo padrão */
+}
+
+/* Estilos para mensagens do bot */
+.bot .mensagem {
+    background-color: #e0f7fa; /* Cor de fundo para mensagens do bot */
+}
+
+/* Estilos para mensagens do usuário */
+.usuario .mensagem {
+    text-align: right; /* Alinhamento à direita para mensagens do usuário */
+    background-color: #f0f0f0; /* Cor de fundo para mensagens do usuário */
+}
+
+
+
+
+
+/* conteudo da página  */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+.header-i-need {
+    background-color: #2d2d2d;
     color: #fff;
-    font-size: 24px;
+    padding: 30px 0;
     text-align: center;
-    line-height: 60px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para o chat expandido */
-#container-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+.header-i-need h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Seção Visão, Missão, Valores */
+.section-vmv .container-vmv {
+    margin-bottom: 40px;
+}
+
+.section-vmv h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 10px;
+}
+
+.section-vmv p, .section-vmv ul {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.section-vmv ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section-vmv ul li {
+    margin-bottom: 10px;
+}
+
+/* Seção Avatar */
+.section-avatar .container-avatar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-avatar h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 20px;
+}
+
+.section-avatar .avatar-img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.section-avatar p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Seção Venda e Revenda */
+.section-venda-revenda h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 20px;
+}
+
+.section-venda-revenda p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção Dicas de Moda Sustentável */
+.section-dicas-sustentaveis .container-dicas-sustentaveis {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-dicas-sustentaveis h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 20px;
+}
+
+.section-dicas-sustentaveis ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.section-dicas-sustentaveis ul li {
+    margin-bottom: 10px;
+}
+
+/* Seção Galeria */
+.section-galeria-estilo h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.gallery-item img {
+    max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.section-cards {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-cards h2 {
+    font-size: 2em;
+    color: #202020bd;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
     width: 300px;
-    display: none; /* Começa oculto */
-    flex-direction: column;
-}
-
-.caixa-mensagens {
-    height: 300px;
-    overflow-y: scroll;
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-    flex-grow: 1;
-}
-
-.mensagem {
-    margin: 5px 0;
-}
-
-.usuario {
-    text-align: right;
-}
-
-.bot {
-    text-align: left;
-}
-
-#entrada-usuario {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     margin: 10px;
+    transition: transform 0.2s;
 }
 
-#botao-enviar {
-    padding: 5px 10px;
-    background-color: #4CAF50;
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Seção Faixas com Títulos */
+.section-faixas {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.faixa {
+    background-color: #202020bd;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px 10px;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#fechar-chat {
-    align-self: flex-end;
-    margin: 5px;
-    cursor: pointer;
+.faixa-titulo {
+    font-size: 2em;
+    margin: 0;
 }
+
+/* Rodapé */
+.footer-i-need {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
