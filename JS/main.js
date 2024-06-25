@@ -176,7 +176,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// chatbot
+// loopa
+
+document.addEventListener("DOMContentLoaded", function () {
+    var productImage = document.getElementById('product-image');
+    var zoomLens = document.getElementById('zoom-lens');
+  
+    productImage.addEventListener('mousemove', function (e) {
+      var boundingRect = productImage.getBoundingClientRect();
+      var offsetX = e.clientX - boundingRect.left;
+      var offsetY = e.clientY - boundingRect.top;
+  
+      var lensSize = 200; // Tamanho da lente
+      var imageWidth = productImage.offsetWidth;
+      var imageHeight = productImage.offsetHeight;
+      var ratioX = productImage.naturalWidth / imageWidth;
+      var ratioY = productImage.naturalHeight / imageHeight;
+  
+      var lensX = offsetX - lensSize / 2;
+      var lensY = offsetY - lensSize / 2;
+  
+      if (lensX < 0) lensX = 0;
+      if (lensY < 0) lensY = 0;
+      if (lensX > imageWidth - lensSize) lensX = imageWidth - lensSize;
+      if (lensY > imageHeight - lensSize) lensY = imageHeight - lensSize;
+  
+      zoomLens.style.backgroundImage = 'url(' + productImage.src + ')';
+      zoomLens.style.backgroundSize = (productImage.width * ratioX) + 'px ' + (productImage.height * ratioY) + 'px';
+      zoomLens.style.backgroundPosition = (-lensX * ratioX) + 'px ' + (-lensY * ratioY) + 'px';
+      zoomLens.style.left = (offsetX - lensSize / 2) + 'px';
+      zoomLens.style.top = (offsetY - lensSize / 2) + 'px';
+      zoomLens.style.display = 'block';
+    });
+  
+    productImage.addEventListener('mouseleave', function () {
+      zoomLens.style.display = 'none';
+    });
+  });
+  
 
 
 
