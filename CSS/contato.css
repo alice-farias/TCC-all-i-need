@@ -1,33 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#sidebar {
+    margin: 0;
+    position: sticky;
+    top: 56px;
+    /* altura da navbar */
+    height: calc(100vh - 56px - 56px);
+    /* altura da navbar + altura do footer */
+    width: 30%;
+    background-color: #343a40;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow-y: auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.contatos {
+    margin-top: 5vh;
+}
+
+#insta,
+#whats,
+#gmail {
+    width: 3vh;
+    height: 3vh;
+}
+
+#div1,
+#div2,
+#div3 {
+    display: inline-block;
+    padding: 2vh;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    #sidebar {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* centraliza verticalmente */
+}
+
+#map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-container a {
+    display: block;
+}
+
 #mapa {
-    margin-top: 12vh;
     border: 2px solid rgb(100, 100, 100);
-    border-radius: 2vh;
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 500px) {
     #mapa {
-        height: 90%;
+        height: 100%;
         width: 90%;
     }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width: 1599px) {
     #mapa {
-        height: 70%;
+        height: auto;
         width: 70%;
     }
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (min-width: 1600px) {
     #mapa {
-        height: 40%;
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 1601px) {
-    #mapa {
-        height: 40%;
+        height: auto;
         width: 40%;
     }
 }
