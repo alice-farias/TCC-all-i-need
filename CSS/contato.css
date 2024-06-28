@@ -4,6 +4,79 @@ body {
     min-height: 100vh;
 }
 
+#INICIO,
+#CONTATOS {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px
+}
+
+#INICIO {
+    display: inline-block;
+    position: relative;
+}
+
+#INICIO::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+#INICIO:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+#SOBRE {
+    display: inline-block;
+    position: relative;
+}
+
+#SOBRE::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+#SOBRE:hover::after {
+    transform: scaleX(1);
+}
+
+
+#logo {
+    height: 50px;
+    /* Defina a altura inicial da imagem */
+    transition: transform 0.3s ease;
+    /* Transição suave */
+}
+
+#logo:hover {
+    transform: scale(1.06);
+    /* Aumenta a imagem em 10% */
+}
+
+
+#textinhoLegal {
+    margin-top: 7%;
+}
+
+
+
 #sidebar {
     margin: 0;
     position: sticky;
@@ -26,54 +99,40 @@ h4 {
     justify-content: center;
 }
 
+
+
 .contatos {
     margin-top: 5vh;
 }
 
-#insta,
-#whats,
-#gmail {
+
+
+#imagemInstagram,
+#imagemTelefone,
+#imagemGmail {
     width: 3vh;
     height: 3vh;
+    display: inline;
+    margin-right: 3%;
 }
 
-#div1,
-#div2,
-#div3 {
+#paragrafoInstagram,
+#paragrafoTelefone,
+#paragrafoGmail {
     display: inline-block;
-    padding: 2vh;
+}
+
+#divInstagram,
+#divTelefone {
+    margin-bottom: 6%;
 }
 
 
-
-@media screen and (max-width: 500px) {
-    #sidebar {
-        height: 100%;
-        width: 100%;
-    }
-}
-
-#content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* centraliza verticalmente */
-}
-
-#map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#map-container a {
-    display: block;
+#logoBrecho {
+    width: 95%;
+    height: 30%;
 }
 
 #mapa {
-    border: 2px solid rgb(100, 100, 100);
-    border-radius: 20px;
-    max-width: 100%;
-    height: auto;
+ flex-grow: 1;
 }
