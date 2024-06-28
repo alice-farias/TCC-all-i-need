@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="../CSS/contato.css">
@@ -15,17 +16,18 @@
   <header class="d-flex justify-content-center">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container justify-content-center">
-        <a class="navbar-brand" href="#"><img src="../IMG/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="../index.html"><img src="../IMG/logo.png" alt="" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Início</a>
+              <a class="nav-link active" aria-current="page" href="../index.html" id="INICIO">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="./sobre.html" id="SOBRE">Sobre</a>
             </li>
           </ul>
         </div>
@@ -33,32 +35,47 @@
     </nav>
   </header>
 
-  <div class="container-fluid flex-grow-1 d-flex mt-5 pt-5">
+  <div class="container-fluid flex-grow-1 d-flex mt-5 pt-5" id="aside" itemid="aside">
     <aside class="bg-dark text-white p-3" id="sidebar">
       <h4><u>Fale conosco!!!</u></h4>
-     <div class="contatos">
 
-      <div id="div1">
-        <img src="../IMG/instagram.png" alt="" id="insta"><p>Instagram: &nbsp; &nbsp; @ineedbrecho</p>
+      <p id="textinhoLegal"> &nbsp; &nbsp; Caso queria seguir nossas publicações e promoções em nossas redes sociais,
+        aqui está nosso instagram e facebook! Caso queira falar conosco para verder suas próprias peça de roupa, contacte-nos pelo Whatsapp ou mandando um E-mail!</p>
+
+
+      <div class="contatos">
+
+        <div id="divInstagram">
+          <img src="../IMG/instagram.png" id="imagemInstagram">
+          <p id="paragrafoInstagram">Instagram: &nbsp; @ineedbrecho</p>
+        </div>
+
+        <div id="divTelefone">
+          <img src="../IMG/whatsapp.png" id="imagemTelefone">
+          <p id="paragrafoTelefone">Whatsapp: &nbsp; (11) 4002-8922</p>
+        </div>
+
+        <div id="divGmail">
+          <img src="../IMG/gmail.png" id="imagemGmail">
+          <p id="paragrafoGmail">E-mail: &nbsp; ineedbrecho@gmail.com</p>
+        </div>
+
+        <img src="../IMG/ineedbrechobranco.png" alt="" id="logoBrecho">
+
       </div>
-
-      <div id="div2">
-        <img src="../IMG/whatsapp.png" alt="" id="whats"><p>Whatsapp: &nbsp; &nbsp; (11) 4002-8922</p>
-      </div>
-
-      <div id="div3">
-        <img src="../IMG/gmail.png" alt="" id="gmail"><p>E-mail: &nbsp; &nbsp; ineedbrecho@gmail.com</p>
-      </div>
-
-     </div>
     </aside>
-    <div class="container-fluid d-flex justify-content-end align-items-center p-3" id="content">
-      <div id="map-container">
-        <a href="https://www.google.com/maps/place/I+Need+Brechó/@-23.5538777,-46.6854263,12z/data=!4m6!3m5!1s0x94ce582aaf17edb1:0xc8b93c2bffd0e4a4!8m2!3d-23.5589721!4d-46.683023!16s%2Fg%2F11f397zgkc?entry=ttu" target="_blank">
-          <img src="../IMG/mapa.PNG" alt="" id="mapa" class="img-fluid">
-        </a>
-      </div>
-    </div>
+  </div>
+
+
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58519.46068454961!2d-46.697880253709265!3d-23.551690856822436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582aaf17edb1%3A0xc8b93c2bffd0e4a4!2sI%20Need%20Brech%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1719531814850!5m2!1spt-BR!2sbr"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade" id="mapa">
+  </iframe>
+
+
+
   </div>
 
   <footer class="bg-dark text-white text-center py-3 mt-4">
@@ -74,7 +91,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="./JS/main.js"></script>
 </body>
 
