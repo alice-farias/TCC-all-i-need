@@ -2,13 +2,25 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+}
+
+#linkInsta {
+    color: white;
+    border-bottom: 1px solid transparent;
+    border-radius: 5%;
+}
+
+#linkInsta:hover {
+    border-bottom: 1px solid white;
+    border-radius: 5%;
 }
 
 #INICIO,
 #CONTATOS {
     display: inline-block;
     margin-right: 15px;
-    margin-left: 15px
+    margin-left: 15px;
 }
 
 #INICIO {
@@ -33,8 +45,6 @@ body {
     transform: scaleX(1);
 }
 
-
-
 #SOBRE {
     display: inline-block;
     position: relative;
@@ -57,34 +67,25 @@ body {
     transform: scaleX(1);
 }
 
-
 #logo {
     height: 50px;
-    /* Defina a altura inicial da imagem */
     transition: transform 0.3s ease;
-    /* Transição suave */
 }
 
 #logo:hover {
     transform: scale(1.06);
-    /* Aumenta a imagem em 10% */
 }
-
 
 #textinhoLegal {
     margin-top: 7%;
 }
 
-
-
 #sidebar {
     margin: 0;
-    position: sticky;
-    top: 56px;
-    /* altura da navbar */
-    height: calc(100vh - 56px - 56px);
-    /* altura da navbar + altura do footer */
+    height: auto;
+    /* Ajuste para altura automática */
     width: 30%;
+    /* Aumento da largura da sidebar */
     background-color: #343a40;
     color: white;
     padding-top: 1rem;
@@ -99,13 +100,9 @@ h4 {
     justify-content: center;
 }
 
-
-
 .contatos {
     margin-top: 5vh;
 }
-
-
 
 #imagemInstagram,
 #imagemTelefone,
@@ -127,12 +124,83 @@ h4 {
     margin-bottom: 6%;
 }
 
-
 #logoBrecho {
     width: 95%;
     height: 30%;
 }
 
+#tudo {
+    display: flex;
+    flex-direction: row;
+}
+
+#mapaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 #mapa {
- flex-grow: 1;
+    width: 100%;
+    max-width: 800px;
+    /* Definir largura máxima do mapa */
+    text-align: center;
+}
+
+#tituloMapa {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    #sidebar {
+        width: 35%;
+        /* Ajuste para telas maiores */
+    }
+}
+
+@media (max-width: 992px) {
+    #sidebar {
+        width: 40%;
+        /* Ajuste para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #tudo {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        /* Ajuste para dispositivos menores */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #INICIO,
+    #SOBRE,
+    #CONTATOS {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    #tituloMapa {
+        font-size: 1rem;
+    }
+
+    #sidebar {
+        width: 100%;
+        /* Ajuste para dispositivos móveis */
+        margin-bottom: 1rem;
+    }
 }
