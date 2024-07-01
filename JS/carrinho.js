@@ -1,5 +1,3 @@
-// Variável global para armazenar os itens no carrinho
-// Array para armazenar os itens do carrinho
 let cartItems = [];
 
 // Função para abrir o carrinho

@@ -1,7 +1,5 @@
-.card {
-    margin-top: 2rem;
-
-
+header {
+    margin: 5vh;
 }
 
 /* mensagem do banner */
@@ -42,41 +40,89 @@
 
 /* cards de itens */
 
-.item {
-    margin: 4vw;
-    /* Aumenta o espaçamento entre os itens */
-    padding-left: 1vw;
-    /* Reduz o padding para um look mais minimalista */
-}
-
-.card-body .title {
-    font-size: large;
-    /* Reduz o tamanho da fonte para um visual mais limpo */
-}
-
-button {
+.container-card {
+    padding: 2rem; /* Menor padding para um design mais compacto */
+    margin: 10vh;
+  }
+  
+  .card {
     border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-}
-
-/* Estilo para centralizar o conteúdo dos cards */
-.card-body {
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
     text-align: center;
-    /* Alinha o conteúdo ao centro */
-}
-
-/* Estilo para o botão de compra */
-.btn-secondary {
-    margin-top: 1.5em;
-    /* Aumenta o espaçamento superior para mais espaço visual */
-    padding: 0.5em 1em;
-    /* Adiciona padding ao botão */
-    font-size: small;
-    /* Reduz o tamanho da fonte para minimalismo */
-}
-
-
+    padding: 0.8rem; /* Menor padding para um design mais compacto */
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.4rem;
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-dark {
+    background: #333;
+    border: none;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-dark:hover {
+    background: #555;
+  }
+  
+  .btn img {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 0.9rem;
+    }
+  
+    .card-text {
+      font-size: 0.8rem;
+    }
+  
+    .btn-dark {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+    }
+  }
+  
+  button {
+    border: none;
+  }
+  
 
 /* carrinho */
 

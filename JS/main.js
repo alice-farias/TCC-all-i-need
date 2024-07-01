@@ -20,7 +20,7 @@ $(document).ready(function() {
 });
 
 // Adicionar Event Listeners para todos os cards
-const cards = document.querySelectorAll('.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15');
+const cards = document.querySelectorAll('.card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19, .card20');
 
 cards.forEach(card => {
     let defaultImg, hoverImgSrc, defaultImgSrc;
@@ -101,6 +101,31 @@ cards.forEach(card => {
         defaultImg = card.querySelector('.jeans5');
         hoverImgSrc = './IMG/jeans5.gif';
         defaultImgSrc = './IMG/jeans5.png';
+    }
+    else if (card.classList.contains('card16')) {
+        defaultImg = card.querySelector('.calcaJeans');
+        hoverImgSrc = './IMG/calcaJeans.gif';
+        defaultImgSrc = './IMG/calcaJeans.png';
+    }
+    else if (card.classList.contains('card17')) {
+        defaultImg = card.querySelector('.calcaElastico');
+        hoverImgSrc = './IMG/calcaElastico.gif';
+        defaultImgSrc = './IMG/calçaElastico.png';
+    }
+    else if (card.classList.contains('card18')) {
+        defaultImg = card.querySelector('.calcaMoletom');
+        hoverImgSrc = './IMG/calcaMoletom.gif';
+        defaultImgSrc = './IMG/calcaMoletom.png';
+
+    } else if (card.classList.contains('card19')) {
+        defaultImg = card.querySelector('.calcaMoletomPreto');
+        hoverImgSrc = './IMG/calcaMoletomPreto.gif';
+        defaultImgSrc = './IMG/calcaMoletomPreto.png';
+    }
+    else if (card.classList.contains('card20')) {
+        defaultImg = card.querySelector('.calcaJoelho');
+        hoverImgSrc = './IMG/calcaJoelho.gif';
+        defaultImgSrc = './IMG/calcaJoelho.png';
     }
 
 
@@ -214,6 +239,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+//   comentarios
+
+document.querySelectorAll('.estrelas').forEach(starContainer => {
+    const rating = parseInt(starContainer.getAttribute('data-rating'));
+    const stars = starContainer.querySelectorAll('span');
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('active');
+        }
+        star.addEventListener('click', () => {
+            stars.forEach((s, i) => {
+                s.classList.toggle('active', i <= index);
+            });
+        });
+    });
+});
 
 
 

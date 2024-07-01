@@ -1,159 +1,339 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
 
-  header {
-    padding-bottom: 10vh;
-  }
-  
-  /* Estilos do container principal */
-  .container-unica {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #b6afaf81;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 12px;
-    text-align: center; /* Centraliza o conteúdo dentro do container */
-  }
-  
-  /* Estilos para o nome da peça */
-  .nome-peca-unica {
-    font-size: 2.5em; /* Aumenta o tamanho do nome da peça */
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #000000; /* Cor mais escura para maior contraste */
-  }
-  
-  /* Estilos para a descrição da peça */
-  .descricao-peca-unica {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #000000; /* Tom de cinza suave para descrição */
-  }
-  
-  /* Estilos para o preço da peça */
-  .preco-peca-unica {
-    font-size: 1.8em; /* Aumenta o tamanho do preço */
-    font-weight: bold;
-    margin-bottom: 30px; /* Maior espaço abaixo do preço */
-    color: #000;
-  }
-  
-  /* Estilos para o botão de compra */
-  .buy-button {
-    font-size: 1.2em; /* Aumenta o tamanho do botão */
-    padding: 12px 24px; /* Maior padding para botão mais visível */
-    background-color: #000000; /* Cor de fundo azul para destaque */
-    color: #fff; /* Texto branco para melhor contraste */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buy-button:hover {
-    background-color: #000000; /* Cor mais escura ao passar o mouse */
-  }
-  
-  /* Estilos para os títulos de seções relacionadas */
-  .produtos-relacionados-unicos h2,
-  .comentarios-positivos-unicos h2,
-  .comentarios-usuarios h2 {
-    font-size: 1.8em; /* Tamanho maior para os títulos */
-    margin-bottom: 30px; /* Maior espaço abaixo dos títulos */
-    color: #000000;
-  }
-  
-  /* Estilos para os produtos relacionados */
-  .produto-unico {
-    border: none;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 20px; /* Espaço entre os produtos relacionados */
-  }
-  
-  .produto-unico img {
-    border-bottom: 1px solid #000000;
-    max-width: 100%; /* Imagens dos produtos relacionados responsivas */
-    height: auto;
-  }
-  
-  /* Estilos para os cards de produtos relacionados */
-  .card-body {
-    padding: 15px;
-  }
-  
-  /* Estilos para comentários individuais */
-  .comentario-unico {
-    background: #cecbcb;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(228, 224, 224, 0.1);
-    margin-bottom: 20px; /* Espaço entre os comentários */
-  }
-  
-  /* Estilos para o container de imagens do carrossel */
-  .image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  /* Estilos para os itens do carrossel */
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Estilos para a lupa */
-  .zoom-lens {
-    position: absolute;
-    border: 2px solid #080808; /* Borda azul para destacar a lente */
-    width: 150px; /* Aumenta o tamanho da lente */
-    height: 150px; /* Aumenta o tamanho da lente */
-    display: none;
-    background-color: rgba(10, 10, 10, 0.9); /* Fundo branco semi-transparente */
-    cursor: crosshair;
-    z-index: 1000; /* Para que a lente fique acima da imagem */
-    border-radius: 50%; /* Bordas arredondadas para a lente */
-    pointer-events: none; /* Evita interação direta com a lente */
-  }
-  
-  /* Estilos para as miniaturas do carrossel */
-  .carousel-thumbnails {
-    margin-top: 20px; /* Maior espaço acima das miniaturas */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .carousel-thumbnail {
-    width: 80px; /* Aumenta o tamanho das miniaturas */
-    height: 80px; /* Aumenta o tamanho das miniaturas */
-    margin: 0 10px; /* Maior espaço entre as miniaturas */
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-  
-  .carousel-thumbnail:hover {
-    border-color: #000000; /* Cor da borda ao passar o mouse */
-  }
+header {
+  padding-bottom: 10vh;
+}
 
-  /* Estilos para a descrição da peça */
-.descricao-peca-unica {
-    font-size: 1em; /* Tamanho menor para a descrição */
-    color: #000000; /* Tom de cinza mais suave */
-    text-align: justify; /* Alinhamento à esquerda */
-    margin-left: 10px; /* Espaço à esquerda da descrição */
-    margin-top: 10px; /* Espaço acima da descrição */
-    max-width: calc(150% - 200px); /* Largura máxima para a descrição */
+/* Estilos do container principal */
+.container-unica {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para o nome da peça */
 .nome-peca-unica {
-    padding-top: 10vh;
+  font-size: 2.5em; /* Aumenta o tamanho do nome da peça */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000; /* Cor preta */
+  padding-top: 10vh;
+  position: relative;
+  margin-bottom: 30px; /* Espaço maior abaixo do título */
+}
+
+/* Contêiner flexível para a imagem e a descrição */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Estilos para a imagem principal */
+.main-image {
+  flex: 1 1 45%;
+  max-width: 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Estilos para a descrição da peça */
+.descricao-peca-unica {
+  flex: 1 1 45%;
+  max-width: 100%;
+  font-size: 1em; /* Tamanho menor para a descrição */
+  color: #000000; /* Texto preto */
+  text-align: justify; /* Alinhamento à esquerda */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #ffffff; /* Fundo cinza claro para destaque */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.descricao-peca-unica:hover {
+  transform: scale(1.02);
+}
+
+/* Estilos para o preço da peça */
+.preco-peca-unica {
+  font-size: 1.8em; /* Aumenta o tamanho do preço */
+  font-weight: bold;
+  margin: 30px 0; /* Maior espaço acima e abaixo do preço */
+  color: #000000;
+}
+
+/* Estilos para o botão de compra */
+.buy-button {
+  font-size: 1.5em; /* Tamanho maior do botão */
+  padding: 15px 30px; /* Padding maior para um botão mais visível */
+  background-color: #000000; /* Cor de fundo preta */
+  color: #ffffff; /* Texto branco para contraste */
+  border: none;
+  border-radius: 10px; /* Bordas mais arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #333333; /* Cor mais clara ao passar o mouse */
+  transform: scale(1.1); /* Aumento mais perceptível ao passar o mouse */
+}
+
+/* Estilos para os títulos de seções relacionadas */
+.produtos-relacionados-unicos h2,
+.comentarios-positivos-unicos h2,
+.comentarios-usuarios h2 {
+  font-size: 1.8em; /* Tamanho maior para os títulos */
+  margin-bottom: 40px; /* Maior espaço abaixo dos títulos */
+  color: #000000;
+  position: relative;
+}
+
+/* Efeito de vida nos títulos */
+.produtos-relacionados-unicos h2::after,
+.comentarios-positivos-unicos h2::after,
+.comentarios-usuarios h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px; /* Maior espaço abaixo do título */
+  width: 60px;
+  height: 4px;
+  background: #000000;
+  transform: translateX(-50%);
+}
+
+/* Estilos para os produtos relacionados */
+.produto-unico {
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Espaço entre os produtos relacionados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-unico:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.produto-unico img {
+  border-bottom: 1px solid #000000;
+  max-width: 100%; /* Imagens dos produtos relacionados responsivas */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem se ajuste ao contêiner sem distorção */
+}
+
+/* Animações adicionais */
+@keyframes hoverGlow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Estilos para os cards de produtos relacionados */
+.card-body {
+  padding: 15px;
+}
+
+
+
+/* Estilos para o container de imagens do carrossel */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Estilos para os itens do carrossel */
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem se ajuste ao contêiner sem distorção */
+}
+
+/* Estilos para a lupa */
+.zoom-lens {
+  position: absolute;
+  border: 2px solid #080808; /* Borda azul para destacar a lente */
+  width: 150px; /* Aumenta o tamanho da lente */
+  height: 150px; /* Aumenta o tamanho da lente */
+  display: none;
+  background-color: rgba(10, 10, 10, 0.9); /* Fundo branco semi-transparente */
+  cursor: crosshair;
+  z-index: 1000; /* Para que a lente fique acima da imagem */
+  border-radius: 50%; /* Bordas arredondadas para a lente */
+  pointer-events: none; /* Evita interação direta com a lente */
+}
+
+/* Estilos para as miniaturas do carrossel */
+.carousel-thumbnails {
+  margin-top: 20px; /* Maior espaço acima das miniaturas */
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-thumbnail {
+  width: 80px; /* Aumenta o tamanho das miniaturas */
+  height: 80px; /* Aumenta o tamanho das miniaturas */
+  margin: 0 10px; /* Maior espaço entre as miniaturas */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}  
+
+.carousel-thumbnail:hover {
+  border-color: #000000; /* Cor da borda ao passar o mouse */
+}
+
+
+/* 
+ */
+
+ .mostrador-imagens {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px 0;
+}
+
+.container-mostrador {
+  display: flex;
+  animation: deslizar-direita 30s linear infinite;
+}
+
+.conteudo-mostrador {
+  display: flex;
+}
+
+.conteudo-mostrador img {
+  width: 200px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.conteudo-mostrador img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes deslizar-direita {
+  0% {
+      transform: translateX(-50%);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+
+
+/* comentarios */
+
+.container-comentario {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #fff;
+  position: relative;
+}
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #000000;
+  margin: 10px auto;
+}
+.comentario-unico {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.comentario-unico:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+.comentario-unico strong {
+  font-size: 1.2em;
+  color: #000000;
+}
+.comentario-unico p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+.estrelas {
+  display: flex;
+  gap: 5px;
+}
+.estrelas span {
+  font-size: 1.5em;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.estrelas span:hover, .estrelas span.active {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 5px #29171d, 0 0 10px #473239, 0 0 20px #3a3637, 0 0 30px #332e30;
+  }
+  50% {
+      box-shadow: 0 0 10px #29171d, 0 0 10px #473239, 0 0 20px #3a3637, 0 0 30px #332e30;
+  }
+  100% {
+      box-shadow: 0 0 5px #29171d, 0 0 10px #473239, 0 0 20px #3a3637, 0 0 30px #332e30;
+  }
+}
+.comentario-unico:hover {
+  animation: glow 1.5s infinite;
 }
