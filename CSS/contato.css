@@ -67,6 +67,29 @@ body {
     transform: scaleX(1);
 }
 
+
+#LOGIN {
+    display: inline-block;
+    position: relative;
+}
+
+#LOGIN::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+#LOGIN:hover::after {
+    transform: scaleX(1);
+}
+
 #logo {
     height: 50px;
     transition: transform 0.3s ease;
@@ -182,14 +205,6 @@ h4 {
 }
 
 @media (max-width: 576px) {
-
-    #INICIO,
-    #SOBRE,
-    #CONTATOS {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
     #logo {
         height: 40px;
     }
@@ -203,4 +218,31 @@ h4 {
         /* Ajuste para dispositivos móveis */
         margin-bottom: 1rem;
     }
+}
+
+#INICIO,
+#SOBRE,
+#LOGIN {
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+#CARRINHO {
+    margin-left: 15px;
+    margin-right: 15px;
+    opacity: 15%;
+    pointer-events: none;
+    cursor: default;
+    
+}
+
+#cart-item-count{
+    opacity: 15%;
+    pointer-events: none;
+    cursor: default;
+}
+
+
+#pFooter{
+    opacity: 50%;
 }
