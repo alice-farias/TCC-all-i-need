@@ -39,7 +39,65 @@
                 <label for="cidade">Cidade</label>
             </div>
 
-            <button type="submit" class="submit-btn"><a href="../index.html">Confirmar Endereço</a></button>
+            <div class="botoes">
+                <button type="button" class="submit-btn" id="voltarBtn">Voltar</button>
+                <button type="button" class="submit-btn" id="confirmarBtn">Confirmar</button>
+            </div>
+
+            <!-- Popup -->
+    <div id="confirmacaoPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="fecharPopup">&times;</span>
+            <h2>Confirmar Endereço</h2>
+            <p>Deseja confirmar este endereço?</p>
+            <button type="button" id="confirmarPopupBtn">Sim</button>
+            <button type="button" id="cancelarPopupBtn">Corrigir</button>
+        </div>
+    </div>
+
+    <script>
+// Seleciona os elementos do DOM
+const confirmarBtn = document.getElementById('confirmarBtn');
+const voltarBtn = document.getElementById('voltarBtn');
+const popup = document.getElementById('confirmacaoPopup');
+const fecharPopup = document.getElementById('fecharPopup');
+const confirmarPopupBtn = document.getElementById('confirmarPopupBtn');
+const cancelarPopupBtn = document.getElementById('cancelarPopupBtn');
+
+// Mostra o popup ao clicar em "Confirmar Endereço"
+confirmarBtn.addEventListener('click', function() {
+    popup.style.display = 'block';
+});
+
+// Fecha o popup ao clicar no botão de fechar
+fecharPopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Fecha o popup ao clicar em "Cancelar"
+cancelarPopupBtn.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Ação ao clicar em "Sim, Confirmar"
+confirmarPopupBtn.addEventListener('click', function() {
+    // Aqui você pode colocar a lógica para prosseguir com a ação desejada
+    alert('Endereço confirmado!'); // Exemplo simples de mensagem de alerta
+
+    // Redireciona para outra página após confirmar
+    window.location.href = '../HTML/sucesso.html'; // Substitua '../outra_pagina.html' pelo URL desejado
+    // ou use window.location.replace('../outra_pagina.html'); para substituir a entrada do histórico
+
+    popup.style.display = 'none'; // Fecha o popup após confirmar
+});
+
+// Exemplo: voltar à página anterior
+voltarBtn.addEventListener('click', function() {
+    window.history.back(); // Volta para a página anterior
+});
+
+
+    </script>
 
 
 

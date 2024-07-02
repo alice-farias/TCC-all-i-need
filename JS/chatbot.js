@@ -72,3 +72,5 @@ function alternarChat() {
     const containerChat = document.getElementById('container-chat');
     containerChat.style.display = containerChat.style.display === 'none' ? 'flex' : 'none';
 }
+
+// story

@@ -2,72 +2,77 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ffffff;
     font-family: 'Arial', sans-serif;
     background-image: url(../IMG/bgcheckout.gif);
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-size: fixed; /* Ajusta o tamanho da imagem para cobrir todo o contêiner */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #d3d2d2b9;
-    padding: 60px;
+    background-color: rgba(211, 210, 210, 0.73);
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    max-width: 400px; /* Diminuindo a largura máxima */
+    width: 90%;
+    box-sizing: border-box;
+    margin: 20px;
 }
 
-
 .credit-card {
-    width: 320px;
-    height: 190px;
+    width: 100%; /* Largura do cartão de crédito responsiva */
+    max-width: 250px; /* Diminuindo a largura máxima do cartão de crédito */
+    height: 150px; /* Diminuindo a altura do cartão de crédito */
     perspective: 1000px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
     transform-style: preserve-3d;
 }
 
 .credit-card .front, .credit-card .back {
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     backface-visibility: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    background: linear-gradient(45deg, #75777c, #2d3135);
+    box-shadow: 0 4px 15px rgba(138, 42, 182, 0.2);
+    background: linear-gradient(45deg, #5c0e5670, #780d8d);
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
-    color: #fff;
 }
 
 .credit-card .back {
     transform: rotateY(180deg);
-    background: linear-gradient(45deg, #545a5f, #7b8494);
+    background: linear-gradient(45deg, #5c0e5652, #780d8d);
 }
 
 .card-logo {
-    font-size: 1.2em;
+    font-size: 0.8em; /* Ajustado para melhor visibilidade */
     font-weight: bold;
 }
 
 .chip {
-    width: 50px;
-    height: 35px;
+    width: 30px; /* Diminuindo o tamanho do chip */
+    height: 20px;
     background-color: #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .card-number, .card-holder div, .card-expiration div, .cvv-container div {
-    font-size: 1.2em;
+    font-size: 0.8em; /* Ajustado para melhor visibilidade */
 }
 
 .card-holder, .card-expiration, .cvv-container {
@@ -76,9 +81,9 @@ body {
 }
 
 .magnetic-strip {
-    height: 40px;
+    height: 15px; /* Diminuindo a altura da tira magnética */
     background-color: #333;
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 .container .credit-card {
@@ -94,21 +99,22 @@ body {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 8px; /* Diminuindo o espaçamento */
+    width: 100%;
 }
 
 label {
-    margin-bottom: 5px;
-    font-size: 0.9em;
+    margin-bottom: 3px;
+    font-size: 0.7em; /* Ajustado para melhor visibilidade */
     color: #333;
 }
 
 input {
-    padding: 5px;
+    padding: 6px; /* Diminuindo o preenchimento */
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    font-size: 1em;
+    font-size: 0.8em; /* Ajustado para melhor visibilidade */
 }
 
 input::placeholder {
@@ -121,7 +127,7 @@ input::placeholder {
 }
 
 .expiration-inputs input {
-    width: 50px;
+    width: 30px; /* Diminuindo a largura */
     margin-right: 5px;
 }
 
@@ -131,16 +137,16 @@ input::placeholder {
 
 .input-wrapper {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Diminuindo o espaçamento */
     width: 100%;
 }
 
 .input-wrapper label {
     position: absolute;
-    top: -10px; /* Ajuste para subir o rótulo */
+    top: -10px;
     left: 20px;
     color: #aaa;
-    font-size: 16px;
+    font-size: 10px; /* Ajustado para melhor visibilidade */
     pointer-events: none;
     transition: 0.3s ease-out;
     background-color: #fff;
@@ -148,15 +154,15 @@ input::placeholder {
 }
 
 .input-wrapper input {
-    width: calc(100% - 40px);
-    padding: 15px 20px;
-    font-size: 16px;
+    width: calc(100% - 30px);
+    padding: 8px 15px; /* Diminuindo o preenchimento */
+    font-size: 10px; /* Ajustado para melhor visibilidade */
     border: none;
     background-color: #f9f9f9;
     border-bottom: 2px solid #ddd;
     transition: 0.3s ease-out;
     color: #333;
-    outline: none; /* Remover borda ao focar */
+    outline: none;
 }
 
 .input-wrapper input:focus,
@@ -166,8 +172,8 @@ input::placeholder {
 
 .input-wrapper input:focus + label,
 .input-wrapper input:valid + label {
-    top: -20px; /* Ajuste para subir mais o rótulo ao focar */
-    font-size: 12px;
+    top: -20px;
+    font-size: 8px;
     color: #000000;
 }
 
@@ -175,25 +181,25 @@ input::placeholder {
     background-color: #000000;
     color: #fff;
     border: none;
-    padding: 20px 30px;
-    font-size: 18px;
+    padding: 8px 15px; /* Diminuindo o preenchimento */
+    font-size: 12px; /* Ajustado para melhor visibilidade */
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
-    margin-left: 45px;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
     font-weight: 600;
-
+    align-self: center; /* Centralizando o botão */
+    margin-left: 1.5vh;
 }
 
 .submit-btn:hover {
-    background-color: #000000;
+    background-color: #333;
 }
 
 .fa-map-marker-alt {
     color: #000000;
-    font-size: 48px;
+    font-size: 20px; /* Diminuindo o tamanho do ícone */
     margin-bottom: 20px;
 }
 
@@ -204,10 +210,10 @@ a {
 
 .input-wrapper label {
     position: absolute;
-    top: -10px; /* Ajuste para subir o rótulo */
+    top: -10px;
     left: 20px;
     color: #000000;
-    font-size: 16px;
+    font-size: 10px; /* Ajustado para melhor visibilidade */
     pointer-events: none;
     transition: 0.3s ease-out;
     background-color: #dad9d9;
@@ -215,5 +221,3 @@ a {
     border: 1px solid transparent;
     border-radius: 10px 0px 10px 0px;
 }
-
-

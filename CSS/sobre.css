@@ -1,3 +1,6 @@
+header {
+margin-bottom: 5vh;
+}
 /* Botão para abrir o chat */
 #botao-chat {
     position: fixed;
@@ -141,302 +144,50 @@
 
 
 
+/* pagina */
 
-
-/* conteudo da página  */
-
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos do corpo */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Estilos do cabeçalho */
-.header-i-need {
-    background-color: #2d2d2d;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.header-i-need h1 {
-    font-size: 2.5em;
-    margin-bottom: 0;
-}
-
-/* Seções */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Seção Visão, Missão, Valores */
-.section-vmv .container-vmv {
-    margin-bottom: 40px;
-}
-
-.section-vmv h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 10px;
-}
-
-.section-vmv p, .section-vmv ul {
-    font-size: 1.1em;
-    color: #555;
-}
-
-.section-vmv ul {
-    list-style: none;
-    padding: 0;
-}
-
-.section-vmv ul li {
-    margin-bottom: 10px;
-}
-
-/* Seção Avatar */
-.section-avatar .container-avatar {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.section-avatar h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 20px;
-}
-
-.section-avatar .avatar-img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin: 20px 0;
-}
-
-.section-avatar p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Seção Venda e Revenda */
-.section-venda-revenda h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 20px;
-}
-
-.section-venda-revenda p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Seção Dicas de Moda Sustentável */
-.section-dicas-sustentaveis .container-dicas-sustentaveis {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.section-dicas-sustentaveis h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 20px;
-}
-
-.section-dicas-sustentaveis ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.1em;
-    color: #555;
-}
-
-.section-dicas-sustentaveis ul li {
-    margin-bottom: 10px;
-}
-
-/* Seção Galeria */
-.section-galeria-estilo h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 20px;
-}
-
-.gallery {
+.carousel-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-}
-
-.gallery-item {
-    flex: 1 1 200px;
-    text-align: center;
-}
-
-.gallery-item img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.gallery-item p {
-    margin-top: 10px;
-    color: #555;
-}
-
-.section-cards {
-    background-color: #f7f7f7;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section-cards h2 {
-    font-size: 2em;
-    color: #202020bd;
-    margin-bottom: 40px;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    align-items: center;
+    margin-top: 80px; /* Ajuste conforme necessário para ficar abaixo da navbar */
+    width: 100%;
     overflow: hidden;
-    width: 300px;
-    margin: 10px;
-    transition: transform 0.2s;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
+.carousel {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
 }
 
-.card-content {
-    padding: 20px;
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
 }
 
-.card h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* Seção Faixas com Títulos */
-.section-faixas {
-    background-color: #fff;
-    padding: 60px 20px;
-}
-
-.faixa {
-    background-color: #202020bd;
-    color: white;
-    margin: 20px 0;
-    padding: 20px;
+.carousel-item {
+    min-width: 200px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.faixa-titulo {
-    font-size: 2em;
-    margin: 0;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 5)); /* Ajuste conforme o número de itens */
+    }
 }
 
-/* Rodapé */
-.footer-i-need {
-    background-color: #2d2d2d;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-
-/* Alterações de GUSTAVO - Animações na Navbar */
-#INICIO,
-#CONTATOS,
-#CARRINHO {
-    display: inline-block;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-#INICIO {
-    display: inline-block;
-    position: relative;
-}
-
-#INICIO::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
-}
-
-#INICIO:hover::after {
-    transform: scaleX(1);
-}
-
-
-
-#CONTATOS {
-    display: inline-block;
-    position: relative;
-}
-
-#CONTATOS::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
-}
-
-#CONTATOS:hover::after {
-    transform: scaleX(1);
-}
-
-
-#logo {
-    height: 50px; /* Defina a altura inicial da imagem */
-    transition: transform 0.3s ease; /* Transição suave */
-}
-
-#logo:hover {
-    transform: scale(1.06); /* Aumenta a imagem em 10% */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 150px;
+        height: 180px;
+    }
 }

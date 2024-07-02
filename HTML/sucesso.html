@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Compra</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-smooth: always;
+    background-image: url(../IMG/bgcheckout.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+}
+
+.confirmation-card {
+    background-color: #aca8a8e7;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.confirmation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.confirmation-card h1 {
+    color: #000000;
+    font-size: 26px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.confirmation-card p {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttons button {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #4d884b;
+    color: #121212;
+}
+
+.buttons button:nth-child(2) {
+    border-color: #000000;
+}
+
+.buttons button:nth-child(2):hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+@media (max-width: 600px) {
+    .confirmation-card {
+        padding: 20px;
+    }
+
+    .confirmation-card h1 {
+        font-size: 22px;
+    }
+
+    .confirmation-card p {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="confirmation-card">
+            <h1>Compra Confirmada!</h1>
+            <p>Obrigado por sua compra. Seu pedido foi processado com sucesso.</p>
+            <div class="buttons">
+                <button onclick="downloadReceipt()">Baixar Comprovante</button>
+                <button onclick="goBack()">Voltar ao Site</button>
+            </div>
+        </div>
+    </div>
+   
+
+    <script>
+        function downloadReceipt() {
+    alert("Seu comprovante está sendo baixado...");
+    // Aqui você pode adicionar a lógica para baixar o comprovante
+}
+
+function goBack() {
+    window.location.href = "../index.html"; // Altere para a URL do seu site
+}
+
+    </script>
+
+</body>
+</html>
