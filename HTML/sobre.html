@@ -36,6 +36,9 @@
               <a class="nav-link" href="./contato.html" id="CONTATOS">Contatos</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="./HTML/login.html" id="CONTATOS"> <img src="../IMG/login.png"  width="30px" alt=""></a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" onclick="openCart()"> <img src="../IMG/carrinho.png" width="20px">
                 <span id="cart-item-count">0</span>
               </a>
@@ -46,20 +49,149 @@
     </nav>
   </header>
 
-  <div class="carousel-wrapper">
-    <div class="carousel">
-        <div class="carousel-track">
-            <div class="carousel-item" style="background-image: url('image1.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('image2.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('image3.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('image4.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('image5.jpg');"></div>
+  <section class="story-preview-section">
+    <div class="story-previews">
+        <div class="story-preview" data-index="0" style="background-image: url('https://source.unsplash.com/random/1')"></div>
+        <div class="story-preview" data-index="1" style="background-image: url('https://source.unsplash.com/random/2')"></div>
+        <div class="story-preview" data-index="2" style="background-image: url('https://source.unsplash.com/random/3')"></div>
+    </div>
+</section>
+
+<div class="story-modal">
+    <div class="story-container">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="slide" style="background-image: url('../IMG/story1.png')">
+        </div>
+        <div class="slide" style="background-image: url('../IMG/story2.png')">
+        </div>
+        <div class="slide" style="background-image: url('../IMG/story3.png')">
+        </div>
+    </div>
+    <button class="close-modal">×</button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const storyPreviews = document.querySelectorAll('.story-preview');
+    const modal = document.querySelector('.story-modal');
+    const slides = document.querySelectorAll('.slide');
+    const progressBar = document.querySelector('.progress-bar');
+    const closeModalButton = document.querySelector('.close-modal');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        resetProgressBar();
+    }
+
+    function nextSlide() {
+        if (currentSlide + 1 < slides.length) {
+            showSlide(currentSlide + 1);
+        } else {
+            closeModal();
+        }
+    }
+
+    function resetProgressBar() {
+        progressBar.style.width = '0';
+        setTimeout(() => {
+            progressBar.style.width = '100%';
+        }, 10);
+    }
+
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+        resetProgressBar();
+    }
+
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        stopSlideShow();
+    }
+
+    storyPreviews.forEach((preview, index) => {
+        preview.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            showSlide(index);
+            startSlideShow();
+        });
+    });
+
+    closeModalButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+});
+</script>
+
+
+<div class="container-faixa">
+  <div class="rotating-banner">
+      <div class="banner-content">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 1">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 2">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 3">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 1">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 2">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 3">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 1">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 2">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 3">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 1">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 2">
+          <span>All I need</span>
+          <img src="../IMG/iconefaixa.png" alt="Image 3">
+      </div>
+  </div>
+  <div class="content">
+    <section class="quem-somos">
+        <h2>Quem Somos</h2>
+        <p>Texto breve sobre quem somos. Este é um espaço para apresentar a organização de maneira concisa e cativante.</p>
+    </section>
+    <div class="cards">
+        <div class="card">
+            <img src="path/to/your/card-image1.jpg" alt="Imagem Missão">
+            <h3>Missão</h3>
+            <p>Texto sobre a missão da organização.</p>
+        </div>
+        <div class="card">
+            <img src="path/to/your/card-image2.jpg" alt="Imagem Visão">
+            <h3>Visão</h3>
+            <p>Texto sobre a visão da organização.</p>
+        </div>
+        <div class="card">
+            <img src="path/to/your/card-image3.jpg" alt="Imagem Valores">
+            <h3>Valores</h3>
+            <p>Texto sobre os valores da organização.</p>
         </div>
     </div>
 </div>
-
-
-
+</div>
+  </div>
+</div>
 
 
 

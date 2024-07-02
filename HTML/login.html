@@ -8,32 +8,42 @@
 </head>
 <body>
 
-   <main class="form-center">
+  <main class="form-center">
     <div class="form-container">
         <p class="title">Bem-vindo!</p>
-        <form class="form">
-          <input type="email" class="input" placeholder="E-mail">
-          <input type="password" class="input" placeholder="Senha">
-          <p class="page-link">
-           <a href="#" class="page-link-label">Esqueceu a senha?</a>
-          </p>
-          <button class="form-btn">Entrar</button>
+        <form class="form" onsubmit="handleLogin(event)">
+            <input type="text" id="username" class="input" placeholder="Nome de usuário">
+            <input type="email" class="input" placeholder="E-mail">
+            <input type="password" class="input" placeholder="Senha">
+            <p class="page-link">
+                <a href="#" class="page-link-label">Esqueceu a senha?</a>
+            </p>
+            <button type="submit" class="form-btn">Entrar</button>
         </form>
         <p class="sign-up-label">
-          Não tem uma conta? <a href="../HTML/cadastro.html" class="sign-up-link"> Cadastre-se</a>
+            Não tem uma conta? <a href="../HTML/cadastro.html" class="sign-up-link"> Cadastre-se</a>
         </p>
         <div class="buttons-container">
-          <div class="apple-login-button">
-            <img src="../IMG/apple.png" alt="" width="15px">
-            <span>Entrar com a Apple</span>
-          </div>
-          <div class="google-login-button">
-            <img src="../IMG/google.png" alt="" width="15px">
-            <span>Entrar com o Google</span>
-          </div>
+            <div class="apple-login-button">
+                <img src="../IMG/apple.png" alt="" width="15px">
+                <span>Entrar com a Apple</span>
+            </div>
+            <div class="google-login-button">
+                <img src="../IMG/google.png" alt="" width="15px">
+                <span>Entrar com o Google</span>
+            </div>
         </div>
-      </div>
-   </main>
+    </div>
+</main>
+
+<script>
+  function handleLogin(event) {
+      event.preventDefault();
+      const userName = document.querySelector('#username').value;
+      alert('Bem-vindo, ' + userName + '!');
+      window.location.href = '../index.html'; // Redireciona para a página inicial
+  }
+</script>
 
     
 </body>
