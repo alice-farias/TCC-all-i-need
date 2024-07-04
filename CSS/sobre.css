@@ -2,7 +2,7 @@
 
 
 header {
-margin-bottom: 5vh;
+margin-bottom: 10vh;
 }
 /* Botão para abrir o chat */
 #botao-chat {
@@ -383,7 +383,7 @@ margin-bottom: 5vh;
 
   .container-faixa {
     width: 100%;
-    background-color: #ffffff91;
+    background-color: #F0F0F0;
     padding: 20px 0;
   }
   .rotating-banner {
